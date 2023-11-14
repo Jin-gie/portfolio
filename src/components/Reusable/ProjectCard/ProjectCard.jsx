@@ -1,11 +1,15 @@
 import React from 'react'
 import "./ProjectCard.css"
+import { useNavigate } from 'react-router-dom';
 
 function ProjectCard(props) {
-  const project = props.element;
+  const navigate = useNavigate();
+  const project = props.el;
+
+  console.log(JSON.stringify(props))
 
   return (
-    <div className='w-72 min-h-[340px] border border-solid border-white project-container'>
+    <div className='w-72 min-h-[340px] border border-solid border-white project-container' onClick={() => {navigate("/" + props.path)}}>
       <img src={project.picture} alt="Mockup of Weegift" />
       <div className='flex flex-col items-center text-center'>
         <h3 className='text-white'>{project.title}</h3>

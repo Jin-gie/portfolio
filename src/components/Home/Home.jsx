@@ -85,7 +85,7 @@ function Home() {
           <div className='flex gap-8 flex-wrap'>
             {
               Object.keys(projects).map((key, index) => (
-                <ProjectCard element={projects[key]} />
+                <ProjectCard el={projects[key]} path={key} key={key} />
               ))
             }
           </div>
