@@ -1,38 +1,260 @@
-.App {
-  text-align: center;
+/*============== VARIABLES CSS ==============*/
+:root {
+  /* COLORS */
+  --body-color: #131313;
+  --light-background: #282828;
+  --text-color: white;
+  --title-color: #969696;
+
+  /* FONT SIZES */
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /* FONT WEIGHTS */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 600;
+
+  /* MARGINS BOTTOM */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1 : 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2 : 2rem;
+  --mb-2-5 : 2.5rem;
+  --mb-3: 3rem;
+
+  /* Z-INDEX */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  --graphic-circle-diameter: 642px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*============== RESPONSIVE TYPOGRAPHY ==============*/
+@media screen and (max-width: 992px) {
+  :root {
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/*============== BASE ==============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body, 
+button,
+input,
+textarea {
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  width: fit-content;
+  border: 1px solid white;
+  padding: .5rem;
+  background: linear-gradient(to right, white 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.3s ease;
+}
+
+button:hover {
+  background-position: left bottom;
+  color: var(--body-color);
+}
+
+
+img {
+  margin: auto;
+  display: block;
+}
+
+section {
+  padding: 12rem 0;
+  width: 100vw;
+}
+
+
+/*============== REUSABLE CSS CLASSES ==============*/
+
+.graphic-circle {
+  width: var(--graphic-circle-diameter);
+  height: var(--graphic-circle-diameter);
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid #3F3E3E;
+  filter: blur(2px);
+  
+}
+
+.nav_unselected {
+  color: var(--title-color);
+}
+
+.nav_selected {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.nav_item:hover {
+  color: var(--text-color);
+}
+
+.light_background {
+  background-color: var(--light-background);
+}
+
+.subtitle {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.button {
+  cursor: pointer;
+  width: fit-content;
+  border: 1px solid white;
+  padding: .5rem;
+  transition: background-position 0.3s ease;
+}
+
+.button__left__right {
+  background: linear-gradient(to right, white 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.button__bottom__top {
+  background: linear-gradient(to top, white 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top left;
+}
+
+.button:hover {
+  color: var(--body-color);
+}
+
+.button__left__right:hover {
+  background-position: left bottom;
+}
+
+.button__bottom__top:hover {
+  background-position: bottom left;
+}
+
+
+/*============== LAYOUT ==============*/
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#graph-circle-1 {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  top: calc(30vw / -3);
+  right: calc(30vw /-5);
+
+  /* top: calc(var(--graphic-circle-diameter) / -3);
+  right: calc(var(--graphic-circle-diameter) / -5); */
+}
+
+.content__square {
+  padding: 1rem;
+  border: 2px solid #3F3E3E;
+  border-image: linear-gradient(to bottom, #3F3E3E, rgba(83, 83, 83, 0.05));
+  /* border-image: linear-gradient(to right, #ff9900, #ff3366);   */
+  border-image-slice: 1;
+}
+
+/*============== BUTTONS ==============*/
+
+
+/*============== BREAKPOINTS ==============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+  
+}
+
+/*============== SCROLLBAR ==============*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--body-color); 
+  border-radius: 100px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--title-color); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

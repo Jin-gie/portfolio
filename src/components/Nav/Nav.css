@@ -1,0 +1,7 @@
+#nav__home {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  /* top: calc(50% - var(--graphic-circle-diameter)/2);
+  left: calc(var(--graphic-circle-diameter)*(-5) / 6); */
+}

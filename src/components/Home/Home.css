@@ -1,0 +1,11 @@
+#contact-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  max-width: 500px;
+  background-color: var(--light-background);
+  padding: 0.25rem;
+}

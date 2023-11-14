@@ -1,0 +1,23 @@
+#header {
+  height: 100vh;
+}
+
+
+.arrow-down {
+  position: relative;
+  width: 80px;
+  height: 20px;
+}
+
+.arrow-down::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 60px;
+  height: 60px;
+  border: 3px solid #fff; /* Set border color to white */
+  border-width: 0 3px 3px 0;
+  border-radius: 6px;
+}

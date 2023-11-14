@@ -1,0 +1,18 @@
+.project-container {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-container img {
+  transition: transform 0.3s ease;
+}
+
+.project-container:hover {
+  transform: scale(1) rotate(3deg); /* Adjust the scale and rotation as needed */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Optional: add a box shadow for a lift effect */
+  cursor: pointer;
+}
+
+.project-container:hover img {
+  transform: scale(1.03); /* Adjust the scale as needed */
+}
