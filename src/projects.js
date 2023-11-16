@@ -8,17 +8,23 @@ import Respiration from "./components/Projects/Respiration"
 const projects = {
   "weegift" : {
     title: "WeeGift",
-    subtitle : "UX Design - Dev Web",
+    subtitle : "UX Design - ReactJS",
     description : "Projet universitaire visant à simplifier l'organisation de cagnottes.",
     picture: WeegiftImg,
-    element: <Weegift />
+    element: <Weegift />,
+    sections: [
+      { to_display: "{à_propos}", ref: "#about" },
+    ]
   },
   "neurocosmos" : {
     title: "Neuro Cosmos",
     subtitle : "UX Design",
     description : "Jeu sérieux mêlant neurosciences et aide à la personne.",
     picture: NeurocosmosImg,
-    element: <Neurocosmos />
+    element: <Neurocosmos />,
+    sections: [
+      { to_display: "{à_propos}", ref: "#about" },
+    ]
   },
   "respiration" : {
     path : "weegit",
@@ -26,7 +32,10 @@ const projects = {
     subtitle : "UX Design - Unity",
     description : "Environnement virtuel à destination d'élèves de 5e, pour mieux comprendre la respiration.",
     picture: RespirationImg,
-    element: <Respiration />
+    element: <Respiration />,
+    sections: [
+      { to_display: "{à_propos}", ref: "#about" },
+    ]
   },
 }
 

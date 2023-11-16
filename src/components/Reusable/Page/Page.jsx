@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../../Nav/Nav'
-import Header from '../../Header/Header'
+import Header from '../../HomeHeader/HomeHeader'
 import Button from '../Button'
 import Footer from '../../Footer/Footer'
 import { IconChevronsUp } from '@tabler/icons-react'
@@ -8,8 +8,7 @@ import { IconChevronsUp } from '@tabler/icons-react'
 function Page(props) {
   return (
     <div>
-      <Nav />
-      <Header />
+      <Nav sections={props.sections} />
 
       {props.content}
 

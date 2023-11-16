@@ -4,6 +4,7 @@ import Button from '../Reusable/Button'
 import ProjectCard from '../Reusable/ProjectCard/ProjectCard'
 import projects from '../../projects'
 import "./Home.css"
+import HomeHeader from "../HomeHeader/HomeHeader"
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -27,6 +28,9 @@ function Home() {
 
   return (
     <div>
+      {/* HEADER */}
+      <HomeHeader />
+
       {/* ABOUT */}
       <section className='light_background' id='about'>
         <div className='container flex justify-between items-center'>

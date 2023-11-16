@@ -1,15 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "./Nav.css";
 
-function Nav() {
+function Nav(props) {
   const [selected, setSelected] = useState(0);
-
-  const sections = [
-    { to_display: "{à_propos}", ref: "#about" },
-    { to_display: "{compétences}", ref: "#skills" },
-    { to_display: "{projets}", ref: "#projects" },
-    { to_display: "{me_contacter}", ref: "#contact_me" },
-  ];
 
   useEffect(() => {
     const options = {
@@ -21,14 +14,14 @@ function Nav() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const index = sections.findIndex((section) => section.ref === `#${entry.target.id}`);
+          const index = props.sections.findIndex((section) => section.ref === `#${entry.target.id}`);
           setSelected(index);
           console.log(selected)
         }
       });
     }, options);
 
-    sections.forEach((section) => {
+    props.sections.forEach((section) => {
       const target = document.querySelector(section.ref);
       if (target) {
         observer.observe(target);
@@ -38,15 +31,15 @@ function Nav() {
     return () => {
       observer.disconnect();
     };
-  }, [sections]);
+  }, [props.sections]);
 
   return (
     <div id='nav__home' className='w-full bg-black py-1 opacity-90'>
       <div className='container flex justify-between items-center'>
-        <div><a href="#"><h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1></a></div>
+        <div><a href="/"><h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1></a></div>
         <div className='flex gap-4'>
           {
-            sections.map((section, index) => (
+            props.sections.map((section, index) => (
               <a
                 key={index}
                 href={section.ref}

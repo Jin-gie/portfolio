@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header.css';
+import './HomeHeader.css';
 import Photo from "../../assets/photo_circle.png";
 import { IconChevronCompactDown } from '@tabler/icons-react';
 import Button from '../Reusable/Button';
