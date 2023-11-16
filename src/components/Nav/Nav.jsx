@@ -1,42 +1,48 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "./Nav.css";
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Nav(props) {
   const [selected, setSelected] = useState(0);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.7,
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = props.sections.findIndex((section) => section.ref === `#${entry.target.id}`);
-          setSelected(index);
-          console.log(selected)
-        }
-      });
-    }, options);
+  // useEffect(() => {
+  //   const options = {
+  //     root: null,
+  //     rootMargin: '0px',
+  //     threshold: 0.7,
+  //   };
 
-    props.sections.forEach((section) => {
-      const target = document.querySelector(section.ref);
-      if (target) {
-        observer.observe(target);
-      }
-    });
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         const index = props.sections.findIndex((section) => section.ref === `#${entry.target.id}`);
+  //         setSelected(index);
+  //         console.log(selected)
+  //       }
+  //     });
+  //   }, options);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [props.sections]);
+  //   props.sections.forEach((section) => {
+  //     const target = document.querySelector(section.ref);
+  //     if (target) {
+  //       observer.observe(target);
+  //     }
+  //   });
+
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, [props.sections]);
+
+  console.log(props.sections)
 
   return (
     <div id='nav__home' className='w-full bg-black py-1 opacity-90'>
       <div className='container flex justify-between items-center'>
-        <div><a href="/"><h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1></a></div>
+        <div><Link to="/"><h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1></Link></div>
         <div className='flex gap-4'>
           {
             props.sections.map((section, index) => (

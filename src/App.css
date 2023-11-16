@@ -218,6 +218,11 @@ section {
   border-image-slice: 1;
 }
 
+
+.carousel-container-persona {
+  width: 50%;
+}
+
 /*============== BUTTONS ==============*/
 
 

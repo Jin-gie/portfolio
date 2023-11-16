@@ -6,7 +6,6 @@ import { IconChevronsUp } from "@tabler/icons-react"
 import Button from './components/Reusable/Button';
 import Footer from './components/Footer/Footer';
 import {
-  BrowserRouter,
   Route,
   Routes,
 } from 'react-router-dom'
@@ -25,7 +24,6 @@ function App() {
   
   return (
     <div>
-      <BrowserRouter>
         <Routes>
 
           {/* Home Page */}
@@ -46,17 +44,14 @@ function App() {
                 path={key} 
                 element={
                   <Page 
-                    content={projects[key]["element"]} 
+                    content={projects[key]["element"]}
                     sections={projects[key]["sections"]}
                   />
-                } 
+                }
               />
             ))
           }
         </Routes>
-      </BrowserRouter>
-
-      
     </div>
   );
 }

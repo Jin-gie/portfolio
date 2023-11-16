@@ -13,7 +13,7 @@ const projects = {
     picture: WeegiftImg,
     element: <Weegift />,
     sections: [
-      { to_display: "{à_propos}", ref: "#about" },
+      
     ]
   },
   "neurocosmos" : {
