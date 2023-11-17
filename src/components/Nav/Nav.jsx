@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import "./Nav.css";
 import { useNavigate } from 'react-router-dom';
 import { Link as LinkNav } from 'react-router-dom';
-import { Link as LinkScroll } from 'react-scroll';
+import { Link as LinkScroll, Events, scrollSpy } from 'react-scroll';
 
 function Nav(props) {
   const [selected, setSelected] = useState(0);
@@ -38,6 +38,27 @@ function Nav(props) {
   //   };
   // }, [props.sections]);
 
+  useEffect(() => {
+    // Registering the 'begin' event and logging it to the console when triggered.
+    Events.scrollEvent.register('begin', (to, element) => {
+      console.log('begin', to, element);
+    });
+
+    // Registering the 'end' event and logging it to the console when triggered.
+    Events.scrollEvent.register('end', (to, element) => {
+      console.log('end', to, element);
+    });
+
+    // Updating scrollSpy when the component mounts.
+    scrollSpy.update();
+
+    // Returning a cleanup function to remove the registered events when the component unmounts.
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
   console.log(props.sections)
 
   return (
@@ -55,9 +76,15 @@ function Nav(props) {
                 to={section.ref}
                 key={index}
                 id={`nav-${index}`}
-                className={selected === index ? "nav_selected nav_item hover:cursor-pointer" : "nav_unselected nav_item hover:cursor-pointer"}
+                // className={selected === index ? "nav_selected nav_item hover:cursor-pointer" : "nav_unselected nav_item hover:cursor-pointer"}
+                className='nav_item hover:cursor-pointer'
                 smooth={true}
                 duration={500}
+                spy={true}
+                activeClass={"nav_selected"}
+                spyThrottle={500}
+                hashSpy={true}
+                offset={-75}
               >
                 {section.to_display}
               </LinkScroll>
