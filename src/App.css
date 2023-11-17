@@ -93,7 +93,7 @@ h3 {
   font-size: var(--h3-font-size);
 }
 
-p {
+p, ul {
   margin-bottom: 1rem;
 }
 

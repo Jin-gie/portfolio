@@ -48,7 +48,7 @@ function Weegift(props) {
     },
     {
       icon: <IconCode size={32} strokeWidth={1.5} />,
-      title: 'Développement',
+      title: 'Réalisation',
       description: String.raw`- Développement web
       - Tests utilisateurs
       `,

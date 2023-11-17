@@ -82,7 +82,7 @@ function Nav(props) {
                 duration={500}
                 spy={true}
                 activeClass={"nav_selected"}
-                spyThrottle={500}
+                spyThrottle={100}
                 hashSpy={true}
                 offset={-75}
               >
