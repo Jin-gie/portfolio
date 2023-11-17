@@ -57,9 +57,9 @@ function Home() {
             L'informatique étant un domaine en constante évolution, mes compétences elles aussi évoluent de jour en jour ! 
           </p>
 
-          <div className='flex justify-between'>
+          <div className='two-cols'>
             {/* UX DESIGN */}
-            <div className='w-[45%] content__square'>
+            <div className='content__square flex-1'>
               <h2>UX Design</h2>
               <p>&gt; Analyse de la population et des besoins utilisateurs</p>
               <p>&gt; Personas, tests utilisateurs</p>
@@ -69,7 +69,7 @@ function Home() {
             </div>
 
             {/* Dev Fullstack */}
-            <div className='w-[45%] content__square'>
+            <div className='content__square flex-1'>
               <h2>Développement FullStack</h2>
               <p>&gt; Frontend : <span className='font-bold'>HTML, CSS, JS, React</span></p>
               <p>&gt; Backend : <span className='font-bold'>PHP, MySQL, MariaDB, Firebase, GraphQL</span></p>

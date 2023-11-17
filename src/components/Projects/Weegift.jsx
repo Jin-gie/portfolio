@@ -100,7 +100,7 @@ function Weegift(props) {
       </div>
 
       {/* PRESENTATION */}
-      <section className='container flex justify-between gap-16'>
+      <section className='two-cols'>
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>
@@ -117,7 +117,7 @@ function Weegift(props) {
       {/* DESIGN PROCESS & CONTRIBUTION*/}
       <div className='light_background' id="design_process">
         <section className='container'>
-          <div className='flex gap-16'>
+          <div className='two-cols'>
             <div className='flex-1'>
               <h1>Design Process</h1>
               {timelineSteps.map((step, index) => {
@@ -149,7 +149,7 @@ function Weegift(props) {
       {/* RECHERCHE */}
       <section className='container' id="research">
         <h1>Recherche</h1>
-        <div className='flex justify-between gap-16'>
+        <div className='two-cols'>
           <div className='mb-8'>
             <h2>Étude de l'existant</h2>
             <p>Dans la phase de recherche nous avons dans un premier temps réalisé une étude comparative, nous permettant de mieux cerner l'existant sur le marché, leurs points forts et points faibles. Pour chaque solution, nous avons évalué les fonctionnalités, la navigation et l'interface et design. Les solutions ainsi comparées sont Paypal, Mon Pot Commun, Gift Family et Gift Picker.</p>
@@ -207,7 +207,7 @@ function Weegift(props) {
       <section className='container' id="ideation">
         <h1>Idéation</h1>
         <h2>Maquette Low-Fidelity (LoFi)</h2>
-        <div className='flex gap-16 justify-between'>
+        <div className='two-cols'>
           <div className='flex-1'>
               <p>
                 La première maquette qui a été réalisée pour ce projet est une maquette LoFi, qui a connu plusieurs évolutions. Nous nous sommes dans un premier temps réunies autour d'un atelier de co-conception, en utilisant la méthode “six-to-one” afin de s'accorder sur les différentes vues que nous voulions proposer pour la conception de notre interface, et sur la manière d'organiser les différentes interactions entre les pages.
@@ -217,7 +217,7 @@ function Weegift(props) {
               <img src={LofiPaper} alt="Lofi on paper" />
           </div>
         </div>
-        <div className='flex gap-16 justify-between mt-16'>
+        <div className='two-cols mt-16'>
           <div className='flex-1'>
               <img src={LofiMobile} alt="Mockup de la maquette Lofi Mobile" className='mb-8'/>
               <img src={LofiDesktop} alt="Mockup de la maquette Lofi Desktop" />
@@ -242,7 +242,7 @@ function Weegift(props) {
         <section className='container'>
           <h1>Prototypage</h1>
           <h2>Charte graphique</h2>
-          <div className='flex justify-between gap-16'>
+          <div className='two-cols'>
             <div className='flex-1'>
               <p>
                 WeeGift possède une personnalité bidimensionnelle. D'une part, WeeGift doit renvoyer une image chaleureuse et joyeuse car notre solution porte sur des cagnottes communes et de la recherche de cadeaux. D'autre part, comme il est question d'argent, son image doit également inspirer le sérieux et la confiance.
@@ -256,7 +256,7 @@ function Weegift(props) {
             </div>
           </div>
 
-          <div className='flex justify-between gap-16 mt-8'>
+          <div className='two-cols mt-8'>
             <div className='flex-1'>
               <img src={Gifty} alt='Mascotte gifty avec ses émotions (content, joyeux, triste et père noël)' />
             </div>
@@ -268,7 +268,7 @@ function Weegift(props) {
           </div>
 
           <h2 className='mt-16'>Maquette High-Fidelity (HiFi)</h2>
-          <div className='flex justify-between gap-16'>
+          <div className='two-cols'>
             <div className='flex-1'>
               <p>La maquette HiFi de WeeGift a été directement réalisée sur Figma et un prototypage (lien entre les différentes pages simulant les clics sur l'interface) a été mis en place afin de mieux se rendre compte du produit fini, mais aussi permettre la réalisation de tests utilisateurs.</p>
             </div>

@@ -68,7 +68,7 @@ function Neurocosmos() {
       </div>
 
       {/* PRESENTATION */}
-      <section className='container flex justify-between gap-16'>
+      <section className='container two-cols'>
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>
@@ -85,7 +85,7 @@ function Neurocosmos() {
       {/* DESIGN PROCESS & CONTRIBUTION*/}
       <div className='light_background' id="design_process">
         <section className='container'>
-          <div className='flex gap-16'>
+          <div className='two-cols'>
             <div className='flex-1'>
               <h1>Design Process</h1>
               {timelineSteps.map((step, index) => {
@@ -127,7 +127,7 @@ function Neurocosmos() {
         <section className='container'>
           <h1>Définition</h1>
           <h2>Objectifs pédagogiques</h2>
-          <div className='flex justify-between gap-16'>
+          <div className='two-cols'>
             <div className='flex-1'>
               <p>
                 Neuro Cosmo est un jeu sérieux et a donc pour vocation d'apprendre des concepts en s'amusant. C'est pourquoi des objectifs pédagogiques ont été définis dès le début du projet, nous permettant de mieux orienter notre jeu pour y répondre. L'outil qui a été utilisé est le kit RLG, conçu spécifiquement pour aider à la réalisation de jeux sérieux.
@@ -154,7 +154,7 @@ function Neurocosmos() {
       <section className='container' id="ideation">
         <h1>Idéation</h1>
         <h2>Scénario d'utilisation</h2>
-        <div className='flex gap-16 justify-between'>
+        <div className='two-cols'>
           <div className='flex-1'>
             <p>
               Malgré le temps restreint qui nous été alloué, la réalisation du scénario d'utilisation nous a permis d'avoir un aperçu des différentes étapes du jeu pour ne pas en oublier par la suite. Cette prise de recul au début du projet nous a finalement permis de gagner du temps par la suite.
@@ -165,7 +165,7 @@ function Neurocosmos() {
           </div>
         </div>
         <h2>User Story</h2>
-        <div className='flex gap-16 justify-between mt-16'>
+        <div className='two-cols mt-16'>
           <div className='flex-1'>
             <p>
               L'étape suivante était la réalisation des User Stories du jeu. Il nous était demandé de réaliser un jeu pour 2 joueurs. Ce livrable nous a donc permis de séparer les tâches des deux joueurs et connaître leurs actions : le premier joueur a le rôle de lancer le jeu et de cliquer sur les zones pour placer les électrodes après avoir pris connaissance de la condition du patient, alors que le second joueur doit enregistrer l'électroencéphalogramme en cliquant lorsqu'un pic d'activité est observé.
@@ -194,7 +194,7 @@ function Neurocosmos() {
 
       <section className='container'>
         <h1>Réalisation</h1>
-        <div className='flex justify-between gap-16'>
+        <div className='two-cols'>
           <div className='flex-1'>
               <h2>Développement web</h2>
               <p>

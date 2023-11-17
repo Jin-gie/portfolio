@@ -66,7 +66,7 @@ function Respiration() {
       </div>
 
       {/* PRESENTATION */}
-      <section className='container flex justify-between gap-16'>
+      <section className='container two-cols'>
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>

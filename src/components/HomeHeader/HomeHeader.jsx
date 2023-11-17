@@ -10,10 +10,7 @@ const Header = () => {
 
   return (
     <div className='container flex flex-col justify-between' id="header">
-      {/* My Name */}
-      <div>
-        <h1>&lt;Erin Bernardoni /&gt;</h1>
-      </div>
+      <div></div>
 
       {/* Description */}
       <div className='flex justify-center'>

@@ -247,7 +247,13 @@ section {
 
 /* For small devices */
 @media screen and (max-width: 576px) {
-  
+  .two-cols {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 7rem 10px;
+  }
 }
 
 /*============== SCROLLBAR ==============*/

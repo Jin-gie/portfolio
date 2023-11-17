@@ -13,7 +13,7 @@ function Page(props) {
 
       {props.content}
 
-      <div className='graphic-circle' id="graph-circle-1"></div>
+      {/* <div className='graphic-circle' id="graph-circle-1"></div> */}
 
       <button
         onClick={() => {scroll.scrollToTop()}}
