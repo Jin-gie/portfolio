@@ -91,6 +91,7 @@ h2 {
 
 h3 {
   font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
 }
 
 p, ul {
@@ -189,6 +190,13 @@ section {
 
 .button__bottom__top:hover {
   background-position: bottom left;
+}
+
+.two-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 
