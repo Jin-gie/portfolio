@@ -100,7 +100,7 @@ function Weegift(props) {
       </div>
 
       {/* PRESENTATION */}
-      <section className='two-cols'>
+      <section className='container two-cols'>
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>
