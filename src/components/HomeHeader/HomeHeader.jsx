@@ -3,6 +3,7 @@ import './HomeHeader.css';
 import Photo from "../../assets/photo_circle.png";
 import { IconChevronCompactDown } from '@tabler/icons-react';
 import Button from '../Reusable/Button';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   let marginBetweeArrows = '-mb-10';
@@ -25,17 +26,21 @@ const Header = () => {
       </div>
 
       {/* Arrow at bottom to discover more */}
-      <a href="#about">
+      <Link 
+            to={"about"}
+            smooth={true}
+            duration={500}
+            className='hover:cursor-pointer'
+      >
         <div className='flex flex-col items-center'>
-          <p>Découvrir plus</p>
-          <div className='flex flex-col'>
-            <IconChevronCompactDown color='#1E1E1E' size={50} className='-mb-9'/>
-            <IconChevronCompactDown color='#535353' size={50} className='-mb-9'/>
-            <IconChevronCompactDown color='white' size={50}/>
-
-          </div>
+            <p>Découvrir plus</p>
+            <div className='flex flex-col'>
+              <IconChevronCompactDown color='#1E1E1E' size={50} className='-mb-9'/>
+              <IconChevronCompactDown color='#535353' size={50} className='-mb-9'/>
+              <IconChevronCompactDown color='white' size={50}/>
+            </div>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

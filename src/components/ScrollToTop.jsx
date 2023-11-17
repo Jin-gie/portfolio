@@ -9,7 +9,7 @@ function ScrollToTop(props) {
   }, [pathname]);
 
 
-  return null
+  return <div className='scroll-auto'></div>
 }
 
 export default ScrollToTop

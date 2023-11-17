@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "./Nav.css";
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link as LinkNav } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll';
 
 function Nav(props) {
   const [selected, setSelected] = useState(0);
@@ -42,18 +43,24 @@ function Nav(props) {
   return (
     <div id='nav__home' className='w-full bg-black py-1 opacity-90'>
       <div className='container flex justify-between items-center'>
-        <div><Link to="/"><h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1></Link></div>
+        <div>
+          <LinkNav to="/" onClick={() => {window.scrollTo(0,0)}}>
+            <h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1>
+          </LinkNav>
+        </div>
         <div className='flex gap-4'>
           {
             props.sections.map((section, index) => (
-              <a
+              <LinkScroll 
+                to={section.ref}
                 key={index}
-                href={section.ref}
                 id={`nav-${index}`}
-                className={selected === index ? "nav_selected nav_item" : "nav_unselected nav_item"}
+                className={selected === index ? "nav_selected nav_item hover:cursor-pointer" : "nav_unselected nav_item hover:cursor-pointer"}
+                smooth={true}
+                duration={500}
               >
                 {section.to_display}
-              </a>
+              </LinkScroll>
             ))
           }
         </div>

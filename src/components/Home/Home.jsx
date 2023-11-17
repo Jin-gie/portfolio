@@ -35,9 +35,9 @@ function Home() {
       <section className='light_background' id='about'>
         <div className='container flex justify-between items-center'>
           <div className='max-w-[66%]'>
-            <h1>À propos</h1>
+            <h1>À propos de moi</h1>
             <p>Bonjour ! Passionnée depuis de nombreuses années par le numérique, j'ai suivi une formation en informatique et je suis diplômée depuis peu d'un Master en Sciences Cognitives.</p>
-            <p className='mb-12'>J'ai conscience de l'importance de prendre en compte le besoin utilisateur lors de la conception de solutions, pour avoir des produits utiles, utilisables et utilisés ! C'est pourquoi je m'assure de créer des interfaces utilisateurs aussi élégantes et intuitives,  qu'accessibles pour assurer une expérience utilisateur optimale.</p>
+            <p className='mb-12'>J'ai conscience de l'importance de prendre en compte le besoin utilisateur lors de la conception de solutions, pour avoir des produits utiles, utilisables et utilisés ! C'est pourquoi je m'assure de créer des interfaces utilisateurs aussi élégantes et intuitives, qu'accessibles pour assurer une expérience utilisateur optimale.</p>
             <Button text="Mon CV" />
           </div>
           <div>

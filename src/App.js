@@ -16,10 +16,10 @@ import Page from './components/Reusable/Page/Page';
 function App() {
 
   const home_sections = [
-    { to_display: "{à_propos}", ref: "#about" },
-    { to_display: "{compétences}", ref: "#skills" },
-    { to_display: "{projets}", ref: "#projects" },
-    { to_display: "{me_contacter}", ref: "#contact_me" },
+    { to_display: "{à_propos}", ref: "about" },
+    { to_display: "{compétences}", ref: "skills" },
+    { to_display: "{projets}", ref: "projects" },
+    { to_display: "{me_contacter}", ref: "contact_me" },
   ];
   
   return (
@@ -41,7 +41,7 @@ function App() {
             Object.keys(projects).map((key, index) => (
               <Route 
                 key={key} 
-                path={key} 
+                path={"/" + key} 
                 element={
                   <Page 
                     content={projects[key]["element"]}
