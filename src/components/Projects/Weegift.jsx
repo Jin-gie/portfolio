@@ -15,6 +15,7 @@ import HifiMobile from "../../assets/maquettes/mockup-mobile.jpg"
 import HifiWeb from "../../assets/maquettes/mockup-web.jpg"
 import ProjectCard from '../Reusable/ProjectCard/ProjectCard';
 import projects from '../../projects';
+import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
 
 function Weegift(props) {
   const timelineSteps = [
@@ -285,20 +286,7 @@ function Weegift(props) {
         </section>
       </div>
 
-      <section>
-        <div className='container'>
-          <h1>Mes autres projets</h1>
-          <div className='flex gap-8 flex-wrap'>
-            {
-              Object.keys(projects)
-                .filter((key) => key !== "weegift")
-                .map((key, index) => (
-                  <ProjectCard el={projects[key]} path={key} key={key} />
-              ))
-            }
-          </div>
-        </div>
-      </section>
+      <OtherProjects current_project="weegift" />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import ObjectifsPeda from "../../assets/neurocosmos/objectifs.png"
 import Maquette from "../../assets/neurocosmos/maquette_neurocosmo.jpg"
 import Scenario from "../../assets/neurocosmos/scénario_neurocosmo.jpg"
 import UserStory from "../../assets/neurocosmos/user_story_neurocosmo.jpg"
+import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
 
 function Neurocosmos() {
 
@@ -221,20 +222,7 @@ function Neurocosmos() {
         </section>
       </div>
 
-      <section>
-        <div className='container'>
-          <h1>Mes autres projets</h1>
-          <div className='flex gap-8 flex-wrap'>
-            {
-              Object.keys(projects)
-                .filter((key) => key !== "neurocosmos")
-                .map((key, index) => (
-                  <ProjectCard el={projects[key]} path={key} key={key} />
-              ))
-            }
-          </div>
-        </div>
-      </section>
+      <OtherProjects current_project="neurocosmos" />
     </div>
   )
 }

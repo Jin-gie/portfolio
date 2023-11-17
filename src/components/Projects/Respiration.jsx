@@ -6,6 +6,7 @@ import projects from '../../projects';
 import Cotes from "../../assets/respiration/cotes_ouvert.png";
 import Piece from "../../assets/respiration/piece_scifi.png";
 import Popup from "../../assets/respiration/popup2.png"
+import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
 
 function Respiration() {
   const timelineSteps = [
@@ -121,20 +122,7 @@ function Respiration() {
       </div>
 
 
-      <section>
-        <div className='container'>
-          <h1>Mes autres projets</h1>
-          <div className='flex gap-8 flex-wrap'>
-            {
-              Object.keys(projects)
-                .filter((key) => key !== "respiration")
-                .map((key, index) => (
-                  <ProjectCard el={projects[key]} path={key} key={key} />
-              ))
-            }
-          </div>
-        </div>
-      </section>
+      <OtherProjects current_project="respiration" />
     </div>
   )
 }
