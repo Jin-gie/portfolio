@@ -5,6 +5,7 @@ import ShinobiImg from "./assets/project_shinobi.jpg"
 import Weegift from "./components/Projects/Weegift"
 import Neurocosmos from "./components/Projects/Neurocosmos"
 import Respiration from "./components/Projects/Respiration"
+import Shinobi from "./components/Projects/Shinobi"
 
 const projects = {
   "weegift" : {
@@ -47,7 +48,7 @@ const projects = {
     subtitle : "JS - PHP",
     description : "Adaptation du jeu de société Shinobi Wat-AAH! sur le site Board Game Arena",
     picture: ShinobiImg,
-    element: <Respiration />,
+    element: <Shinobi />,
     tags : ["php"],
     sections: [
       { to_display: "{à_propos}", ref: "#about" },
