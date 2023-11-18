@@ -28,7 +28,7 @@ function Nav(props) {
     };
   }, []);
 
-  console.log(props.sections)
+  console.log(props.sections.length)
 
   return (
     <div id='nav__home' className='w-full bg-black py-1 opacity-90'>
@@ -39,7 +39,10 @@ function Nav(props) {
           </LinkNav>
         </div>
         <NavDesktop sections={props.sections} />
-        <NavMobile sections={props.sections}/>
+        {
+          (props.sections.length > 0) &&
+          <NavMobile sections={props.sections}/>
+        }
       </div>
     </div>
 

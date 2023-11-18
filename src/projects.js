@@ -16,7 +16,11 @@ const projects = {
     element: <Weegift />,
     tags : ["ux", "react"],
     sections: [
-      
+      // { to_display: "{design_process}", ref: "#design_process" },
+      // { to_display: "{recherche}", ref: "#research" },
+      // { to_display: "{définition}", ref: "#definition" },
+      // { to_display: "{idéation}", ref: "#ideation" },
+      // { to_display: "{prototypage}", ref: "#prototype" },
     ]
   },
   "neurocosmos" : {
@@ -27,7 +31,7 @@ const projects = {
     element: <Neurocosmos />,
     tags: ["ux"],
     sections: [
-      { to_display: "{à_propos}", ref: "#about" },
+      // { to_display: "{à_propos}", ref: "#about" },
     ]
   },
   "respiration" : {
@@ -39,7 +43,7 @@ const projects = {
     element: <Respiration />,
     tags : ["ux", "vr"],
     sections: [
-      { to_display: "{à_propos}", ref: "#about" },
+      // { to_display: "{à_propos}", ref: "#about" },
     ]
   },
   "shinobi" : {
@@ -51,7 +55,7 @@ const projects = {
     element: <Shinobi />,
     tags : ["php"],
     sections: [
-      { to_display: "{à_propos}", ref: "#about" },
+      // { to_display: "{à_propos}", ref: "#about" },
     ]
   },
 }
