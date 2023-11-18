@@ -1,10 +1,8 @@
 import React from 'react'
 import Nav from '../../Nav/Nav'
-import Header from '../../HomeHeader/HomeHeader'
-import Button from '../Button'
 import Footer from '../../Footer/Footer'
 import { IconChevronsUp } from '@tabler/icons-react'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 function Page(props) {
   return (

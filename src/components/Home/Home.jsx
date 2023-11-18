@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Photo from '../../assets/photo_forme.png'
-import Button from '../Reusable/Button'
 import ProjectCard from '../Reusable/ProjectCard/ProjectCard'
 import projects from '../../projects'
 import "./Home.css"
 import HomeHeader from "../HomeHeader/HomeHeader"
+import PDF from "../../assets/Erin_Bernardoni_CV.pdf";
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -40,7 +40,9 @@ function Home() {
             <h1>À propos de moi</h1>
             <p>Bonjour ! Passionnée depuis de nombreuses années par le numérique, j'ai suivi une formation en informatique et je suis diplômée depuis peu d'un Master en Sciences Cognitives.</p>
             <p className='mb-12'>J'ai conscience de l'importance de prendre en compte le besoin utilisateur lors de la conception de solutions, pour avoir des produits utiles, utilisables et utilisés ! C'est pourquoi je m'assure de créer des interfaces utilisateurs aussi élégantes et intuitives, qu'accessibles pour assurer une expérience utilisateur optimale.</p>
-            <Button text="Mon CV" />
+            <a href={PDF} rel='noopener noreferrer' target='_blank' type='button' className='button button__left__right'>
+              Mon CV
+            </a>
           </div>
           <div>
             <img loading='lazy' src={Photo} alt="Moi" className='grayscale hover:grayscale-0'/>
@@ -119,7 +121,9 @@ function Home() {
               <textarea name="message" value={formData.message} onChange={handleChange} />
             </label>
             <br />
-            <Button text="Envoyer" type="submit"/>
+            <button className='button button__left__right' type='submit'>
+              Envoyer
+            </button>
           </form>
         </div>
       </section>

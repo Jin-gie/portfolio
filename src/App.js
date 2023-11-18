@@ -1,10 +1,5 @@
 import './App.css';
-import Header from './components/HomeHeader/HomeHeader';
 import Home from './components/Home/Home';
-import Nav from './components/Nav/Nav';
-import { IconChevronsUp } from "@tabler/icons-react"
-import Button from './components/Reusable/Button';
-import Footer from './components/Footer/Footer';
 import {
   Route,
   Routes,
