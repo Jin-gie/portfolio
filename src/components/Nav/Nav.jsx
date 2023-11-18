@@ -1,42 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import "./Nav.css";
-import { useNavigate } from 'react-router-dom';
 import { Link as LinkNav } from 'react-router-dom';
 import { Link as LinkScroll, Events, scrollSpy } from 'react-scroll';
+import NavDesktop from '../NavDesktop/NavDesktop';
+import NavMobile from '../NavMobile/NavMobile';
 
 function Nav(props) {
-  const [selected, setSelected] = useState(0);
-  const navigate = useNavigate();
-
-
-  // useEffect(() => {
-  //   const options = {
-  //     root: null,
-  //     rootMargin: '0px',
-  //     threshold: 0.7,
-  //   };
-
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         const index = props.sections.findIndex((section) => section.ref === `#${entry.target.id}`);
-  //         setSelected(index);
-  //         console.log(selected)
-  //       }
-  //     });
-  //   }, options);
-
-  //   props.sections.forEach((section) => {
-  //     const target = document.querySelector(section.ref);
-  //     if (target) {
-  //       observer.observe(target);
-  //     }
-  //   });
-
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, [props.sections]);
 
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
@@ -69,28 +38,8 @@ function Nav(props) {
             <h1 className='mb-0 hover:text-white'>&lt;Erin Bernardoni /&gt;</h1>
           </LinkNav>
         </div>
-        <div className='flex gap-4'>
-          {
-            props.sections.map((section, index) => (
-              <LinkScroll 
-                to={section.ref}
-                key={index}
-                id={`nav-${index}`}
-                // className={selected === index ? "nav_selected nav_item hover:cursor-pointer" : "nav_unselected nav_item hover:cursor-pointer"}
-                className='nav_item hover:cursor-pointer'
-                smooth={true}
-                duration={500}
-                spy={true}
-                activeClass={"nav_selected"}
-                spyThrottle={100}
-                hashSpy={true}
-                offset={-75}
-              >
-                {section.to_display}
-              </LinkScroll>
-            ))
-          }
-        </div>
+        <NavDesktop sections={props.sections} />
+        <NavMobile sections={props.sections}/>
       </div>
     </div>
 
