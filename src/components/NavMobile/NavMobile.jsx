@@ -16,30 +16,32 @@ function NavMobile(props) {
 
       {isOpen && (
         <div className='fixed left-0 shadow-4xl right-0 p-5 pt-0 bg-neutral-950 h-full'>
-          <ul className='flex flex-col gap-4 mt-8'>
-            {
-              props.sections.map((section, index) => (
-                <li>
-                  <LinkScroll 
-                    to={section.ref}
-                    key={index}
-                    id={`nav-${index}`}
-                    className='nav_item hover:cursor-pointer hover:font-bold'
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    activeClass={"nav_selected"}
-                    spyThrottle={100}
-                    hashSpy={true}
-                    offset={-75}
-                    onClick={() => setIsOpen((prev) => !(prev))}
-                  >
-                    {section.to_display}
-                  </LinkScroll>
-                </li>
-              ))
-            }
-          </ul>
+          <nav>
+            <ul className='flex flex-col gap-4 mt-8'>
+              {
+                props.sections.map((section, index) => (
+                  <li key={index}>
+                    <LinkScroll 
+                      to={section.ref}
+                      key={index}
+                      id={`nav-${index}`}
+                      className='nav_item hover:cursor-pointer hover:font-bold'
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      activeClass={"nav_selected"}
+                      spyThrottle={100}
+                      hashSpy={true}
+                      offset={-75}
+                      onClick={() => setIsOpen((prev) => !(prev))}
+                    >
+                      {section.to_display}
+                    </LinkScroll>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
 
         </div>
       )}

@@ -15,10 +15,10 @@ const Header = () => {
       {/* Description */}
       <div className='flex justify-center'>
         <div className='text-center flex flex-col items-center max-w-md gap-4'>
-          <div><img src={Photo} alt="Moi" className='grayscale hover:grayscale-0'/></div>
+          <div><img loading="lazy" src={Photo} alt="Moi" className='grayscale hover:grayscale-0 w-[146px] h-[146px]'/></div>
           <h2 className='mb-0'>UX Designer & Développeuse Fullstack</h2>
           <p>Sensible à l'expérience utilisateur et aux problématiques liées à l'accessibilité, je conçois des interfaces intuitives et accessibles.</p>
-          <Button text="Mon CV"/>
+            <Button text="Mon CV"/>
         </div>
       </div>
 

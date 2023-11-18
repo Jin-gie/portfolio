@@ -29,7 +29,9 @@ function Home() {
   return (
     <div>
       {/* HEADER */}
-      <HomeHeader />
+      <header>
+        <HomeHeader />
+      </header>
 
       {/* ABOUT */}
       <section className='light_background' id='about'>
@@ -41,7 +43,7 @@ function Home() {
             <Button text="Mon CV" />
           </div>
           <div>
-            <img src={Photo} alt="Moi" className='grayscale hover:grayscale-0'/>
+            <img loading='lazy' src={Photo} alt="Moi" className='grayscale hover:grayscale-0'/>
           </div>
         </div>
       </section>

@@ -171,13 +171,13 @@ function Weegift(props) {
             deviceType={props.deviceType}
           >
             <div className='w-full'>
-              <img src={Iva} alt="Fiche Persona d'Iva"/>
+              <img loading='lazy' src={Iva} alt="Fiche Persona d'Iva"/>
             </div>
             <div className='w-full'>
-              <img src={Celine} alt="Fiche Persona de Céline"/>
+              <img loading='lazy' src={Celine} alt="Fiche Persona de Céline"/>
             </div>
             <div className='w-full'>
-              <img src={Guillaume} alt="Fiche Persona de Guillaume"/>
+              <img loading='lazy' src={Guillaume} alt="Fiche Persona de Guillaume"/>
             </div>
           </Carousel>
         </div>
@@ -205,13 +205,13 @@ function Weegift(props) {
               </p>
           </div>
           <div className='flex-1'>
-              <img src={LofiPaper} alt="Lofi on paper" />
+              <img loading='lazy' src={LofiPaper} alt="Lofi on paper" />
           </div>
         </div>
         <div className='two-cols mt-16'>
           <div className='flex-1'>
-              <img src={LofiMobile} alt="Mockup de la maquette Lofi Mobile" className='mb-8'/>
-              <img src={LofiDesktop} alt="Mockup de la maquette Lofi Desktop" />
+              <img loading='lazy' src={LofiMobile} alt="Mockup de la maquette Lofi Mobile" className='mb-8'/>
+              <img loading='lazy' src={LofiDesktop} alt="Mockup de la maquette Lofi Desktop" />
           </div>
           <div className='flex-1'>
               <p>
@@ -243,13 +243,13 @@ function Weegift(props) {
               </p>
             </div>
             <div className='flex-1'>
-              <img src={Colors} alt='Couleurs utilisées dans Weegift : Coral, Romantic, Pacific Blue, Opal et Magic Mint' />
+              <img loading='lazy' src={Colors} alt='Couleurs utilisées dans Weegift : Coral, Romantic, Pacific Blue, Opal et Magic Mint' />
             </div>
           </div>
 
           <div className='two-cols mt-8'>
             <div className='flex-1'>
-              <img src={Gifty} alt='Mascotte gifty avec ses émotions (content, joyeux, triste et père noël)' />
+              <img loading='lazy' src={Gifty} alt='Mascotte gifty avec ses émotions (content, joyeux, triste et père noël)' />
             </div>
             <div className='flex-1'>
               <p>
@@ -264,8 +264,8 @@ function Weegift(props) {
               <p>La maquette HiFi de WeeGift a été directement réalisée sur Figma et un prototypage (lien entre les différentes pages simulant les clics sur l'interface) a été mis en place afin de mieux se rendre compte du produit fini, mais aussi permettre la réalisation de tests utilisateurs.</p>
             </div>
             <div className='flex-1'>
-              <img src={HifiMobile} alt="Mockup de la maquette Hifi Mobile" className='mb-8' />
-              <img src={HifiWeb} alt="Mockup de la maquette Hifi Desktop" />
+              <img loading='lazy' src={HifiMobile} alt="Mockup de la maquette Hifi Mobile" className='mb-8' />
+              <img loading='lazy' src={HifiWeb} alt="Mockup de la maquette Hifi Desktop" />
             </div>
           </div>
 

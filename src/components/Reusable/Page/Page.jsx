@@ -18,6 +18,7 @@ function Page(props) {
       <button
         onClick={() => {scroll.scrollToTop()}}
         className='button fixed lg:bottom-16 bottom-8 lg:right-16 right-8 button__bottom__top hover:cursor-pointer'
+        aria-label='Go to top of the page'
       >
         <IconChevronsUp size={30}/>
       </button>

@@ -90,14 +90,14 @@ function Respiration() {
               </p>
             </div>
             <div className='flex-1'>
-              <img src={Cotes} alt="Modèle 3D du buste" className='max-w-xs mb-8'/>
-              <img src={Popup} alt="Popup donnant des indications sur les poumons" className='max-w-xs'/>
+              <img loading='lazy' src={Cotes} alt="Modèle 3D du buste" className='max-w-xs mb-8'/>
+              <img loading='lazy' src={Popup} alt="Popup donnant des indications sur les poumons" className='max-w-xs'/>
             </div>
           </div>
 
           <div className='two-cols mt-16'>
             <div className='flex-1'>
-              <img src={Piece} alt="Environnement virtuel 3D (pièce futuriste)" />
+              <img loading='lazy' src={Piece} alt="Environnement virtuel 3D (pièce futuriste)" />
             </div>
             <div className='flex-1'>
               <h3>Technologies utilisées</h3>

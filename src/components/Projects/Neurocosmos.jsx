@@ -135,7 +135,7 @@ function Neurocosmos() {
               </p>
             </div>
             <div className='flex-1'>
-              <img alt='Utilisation du kit RLG pour la définition des objectifs pédagogiques' src={ObjectifsPeda} />
+              <img loading='lazy' alt='Utilisation du kit RLG pour la définition des objectifs pédagogiques' src={ObjectifsPeda} />
             </div>
           </div>
         </section>
@@ -152,7 +152,7 @@ function Neurocosmos() {
             </p>
           </div>
           <div className='flex-1'>
-            <img src={Scenario} alt="Scénario d'utilisation sur tableau blanc" />
+            <img loading="lazy" src={Scenario} alt="Scénario d'utilisation sur tableau blanc" />
           </div>
         </div>
         <h2>User Story</h2>
@@ -163,7 +163,7 @@ function Neurocosmos() {
             </p>
           </div>
           <div className='flex-1'>
-              <img src={UserStory} alt="User stories sur tableau blanc" className='mb-8'/>
+              <img loading='lazy' src={UserStory} alt="User stories sur tableau blanc" className='mb-8'/>
           </div>
         </div>
 
@@ -173,7 +173,7 @@ function Neurocosmos() {
         <section className='container'>
           <h1>Prototypage</h1>
           <h2>Maquette Low Fidelity (LoFi)</h2>
-          <img src={Maquette} alt='Maquette Lofi réalisée sur tableau blanc' />
+          <img loading='lazy' src={Maquette} alt='Maquette Lofi réalisée sur tableau blanc' />
 
           <h2 className='mt-16'>Tests utilisateurs</h2>
           <p>
