@@ -6,7 +6,7 @@ function NavDesktop(props) {
     <ul className='hidden lg:flex gap-4 mb-0'>
       {
         props.sections.map((section, index) => (
-          <li>
+          <li key={index}>
             <LinkScroll 
               to={section.ref}
               key={index}

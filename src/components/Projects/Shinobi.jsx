@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectHero from './ProjectHero/ProjectHero'
 import ShinobiImg from "../../assets/project_shinobi.jpg"
+import OtherProjects from '../Reusable/OtherProjects/OtherProjects'
 
 function Shinobi() {
   return (
@@ -16,6 +17,8 @@ function Shinobi() {
       <section className='container'>
         <h1>Réalisation du projet en cours, description à venir.</h1>
       </section>
+
+      <OtherProjects current_project="neurocosmos" />
     </div>
   )
 }

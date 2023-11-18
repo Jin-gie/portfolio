@@ -10,12 +10,12 @@ function Nav(props) {
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
     Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', to, element);
+      // console.log('begin', to, element);
     });
 
     // Registering the 'end' event and logging it to the console when triggered.
     Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', to, element);
+      // console.log('end', to, element);
     });
 
     // Updating scrollSpy when the component mounts.
@@ -28,7 +28,6 @@ function Nav(props) {
     };
   }, []);
 
-  console.log(props.sections.length)
 
   return (
     <div id='nav__home' className='w-full bg-black py-1 opacity-90'>
