@@ -16,6 +16,7 @@ import HifiWeb from "../../assets/maquettes/mockup-web.jpg"
 import ProjectCard from '../Reusable/ProjectCard/ProjectCard';
 import projects from '../../projects';
 import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
+import ProjectHero from './ProjectHero/ProjectHero';
 
 function Weegift(props) {
   const timelineSteps = [
@@ -80,24 +81,14 @@ function Weegift(props) {
   return (
     <div className=''>
       {/* HERO */}
-      <div className='container mt-40'>
-        <div className='relative'>
-          <img src={WeegiftImg} alt='Mockup of the project Weegift' />
-          <div className='absolute top-0 right-0 bg-background-black/[.88] w-1/2 h-full flex flex-col justify-center px-10'>
-            <h1 className='mb-0'>WeeGift</h1>
-            <p>Conception et Développement d'une application web de gestion de cagnottes avec ou sans cadeaux</p>
-
-            <h2 className='mb-0'>Cadre</h2>
-            <p>Projet universitaire de fin d'études</p>
-
-            <h2 className='mb-0'>Temps alloué</h2>
-            <p>7 mois (septembre 2022 à mars 2023)</p>
-
-            <h2 className='mb-0'>Outils</h2>
-            <p>Figma, Draw.io, ReactJS, Firebase</p>
-          </div>
-        </div>
-      </div>
+      <ProjectHero 
+        img={WeegiftImg}
+        project="WeeGift"
+        desc="Conception et Développement d'une application web de gestion de cagnottes avec ou sans cadeaux"
+        cadre="Projet universitaire de fin d'études"
+        temps="7 mois (septembre 2022 à mars 2023)"
+        outils="Figma, Draw.io, ReactJS, Firebase"
+      />
 
       {/* PRESENTATION */}
       <section className='container two-cols'>

@@ -8,6 +8,7 @@ import Maquette from "../../assets/neurocosmos/maquette_neurocosmo.jpg"
 import Scenario from "../../assets/neurocosmos/scénario_neurocosmo.jpg"
 import UserStory from "../../assets/neurocosmos/user_story_neurocosmo.jpg"
 import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
+import ProjectHero from './ProjectHero/ProjectHero';
 
 function Neurocosmos() {
 
@@ -48,24 +49,14 @@ function Neurocosmos() {
   return (
     <div className=''>
       {/* HERO */}
-      <div className='container mt-40'>
-        <div className='relative'>
-          <img src={NeurocosmosImg} alt='Screen from the game Neurocosmos' />
-          <div className='absolute top-0 right-0 bg-background-black/[.88] w-1/2 h-full flex flex-col justify-center px-10'>
-            <h1 className='mb-0'>Neuro Cosmos</h1>
-            <p>Conception et Développement d'un jeu sérieux mêlant neurosciences et aide à la personne pour un public Licence.</p>
-
-            <h2 className='mb-0'>Cadre</h2>
-            <p>Projet universitaire</p>
-
-            <h2 className='mb-0'>Temps alloué</h2>
-            <p>24 heures</p>
-
-            <h2 className='mb-0'>Outils</h2>
-            <p>Figma, Genially</p>
-          </div>
-        </div>
-      </div>
+      <ProjectHero 
+        img={NeurocosmosImg}
+        project="Neuro Cosmos"
+        desc="Conception et Développement d'un jeu sérieux mêlant neurosciences et aide à la personne pour un public Licence."
+        cadre="Projet universitaire"
+        temps="24 heures"
+        outils="Figma, Genially"
+      />
 
       {/* PRESENTATION */}
       <section className='container two-cols'>

@@ -7,6 +7,7 @@ import Cotes from "../../assets/respiration/cotes_ouvert.png";
 import Piece from "../../assets/respiration/piece_scifi.png";
 import Popup from "../../assets/respiration/popup2.png"
 import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
+import ProjectHero from './ProjectHero/ProjectHero';
 
 function Respiration() {
   const timelineSteps = [
@@ -46,24 +47,14 @@ function Respiration() {
   return (
     <div>
       {/* HERO */}
-      <div className='container mt-40'>
-        <div className='relative'>
-          <img src={RespirationImg} alt='Screen from the game Neurocosmos' />
-          <div className='absolute top-0 right-0 bg-background-black/[.88] w-1/2 h-full flex flex-col justify-center px-10'>
-            <h1 className='mb-0'>La Respiration</h1>
-            <p>Conception et Développement d'un environnement virtuel permettant à des élèves de 5e de mieux comprendre la respiration.</p>
-
-            <h2 className='mb-0'>Cadre</h2>
-            <p>Projet universitaire en groupe de VR</p>
-
-            <h2 className='mb-0'>Temps alloué</h2>
-            <p>2 mois</p>
-
-            <h2 className='mb-0'>Outils</h2>
-            <p>Figma, Blender, Unity 3D</p>
-          </div>
-        </div>
-      </div>
+      <ProjectHero 
+        img={RespirationImg}
+        project="La Respiration"
+        desc="Conception et Développement d'un environnement virtuel permettant à des élèves de 5e de mieux comprendre la respiration."
+        cadre="Projet universitaire en groupe de VR"
+        temps="2 mois"
+        outils="Figma, Blender, Unity 3D"
+      />
 
       {/* PRESENTATION */}
       <section className='container two-cols'>
