@@ -17,7 +17,7 @@ function Page(props) {
 
       <button
         onClick={() => {scroll.scrollToTop()}}
-        className='button fixed bottom-16 right-16 button__bottom__top hover:cursor-pointer'
+        className='button fixed lg:bottom-16 bottom-8 lg:right-16 right-8 button__bottom__top hover:cursor-pointer'
       >
         <IconChevronsUp size={30}/>
       </button>

@@ -178,6 +178,7 @@ section {
   background: linear-gradient(to top, white 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: top left;
+  background-color: var(--body-color);
 }
 
 .button:hover {
