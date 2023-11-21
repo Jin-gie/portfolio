@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "./Nav.css";
 import { Link as LinkNav } from 'react-router-dom';
-import { Link as LinkScroll, Events, scrollSpy } from 'react-scroll';
+import { Events, scrollSpy } from 'react-scroll';
 import NavDesktop from '../NavDesktop/NavDesktop';
 import NavMobile from '../NavMobile/NavMobile';
 

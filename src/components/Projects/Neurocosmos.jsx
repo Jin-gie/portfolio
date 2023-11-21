@@ -1,7 +1,5 @@
 import React from 'react'
 import { IconQuestionMark, IconBulb, IconSearch, IconLayersSubtract, IconCode, IconHierarchy2 } from '@tabler/icons-react'
-import projects from '../../projects';
-import ProjectCard from '../Reusable/ProjectCard/ProjectCard';
 import NeurocosmosImg from "../../assets/project_neurocosmo.jpg"
 import ObjectifsPeda from "../../assets/neurocosmos/objectifs.png"
 import Maquette from "../../assets/neurocosmos/maquette_neurocosmo.jpg"

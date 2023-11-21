@@ -1,8 +1,6 @@
 import React from 'react'
-import { IconQuestionMark, IconBulb, IconSearch, IconLayersSubtract, IconCode, IconHierarchy2 } from '@tabler/icons-react'
+import { IconQuestionMark, IconBulb } from '@tabler/icons-react'
 import RespirationImg from "../../assets/project_respiration.jpg"
-import ProjectCard from '../Reusable/ProjectCard/ProjectCard';
-import projects from '../../projects';
 import Cotes from "../../assets/respiration/cotes_ouvert.png";
 import Piece from "../../assets/respiration/piece_scifi.png";
 import Popup from "../../assets/respiration/popup2.png"
@@ -10,39 +8,6 @@ import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
 import ProjectHero from './ProjectHero/ProjectHero';
 
 function Respiration() {
-  const timelineSteps = [
-    {
-      icon: <IconSearch size={32} strokeWidth={1.5} />, 
-      title: 'Recherche',
-      description: String.raw`- Connaissance des utilisateurs cibles`
-    },
-    {
-      icon: <IconHierarchy2 size={32} strokeWidth={1.5} />, 
-      title: 'Définition',
-      description: String.raw`- Objectifs pédagogiques`,
-    },
-    {
-      icon: <IconBulb size={32} strokeWidth={1.5} />, 
-      title: 'Idéation',
-      description: String.raw`- Scénario
-      - User Story
-      `,
-    },
-    {
-      icon: <IconLayersSubtract size={32} strokeWidth={1.5} />, 
-      title: 'Prototypage',
-      description: String.raw`- Maquette « Low Fidelity »
-      - Tests utilisateurs
-      `,
-    },
-    {
-      icon: <IconCode size={32} strokeWidth={1.5} />,
-      title: 'Réalisation',
-      description: String.raw`- Développement
-      - Tests utilisateurs
-      `,
-    },
-  ];
 
   return (
     <div>

@@ -13,8 +13,6 @@ import Colors from "../../assets/maquettes/colors.png"
 import Gifty from "../../assets/maquettes/gifty-all.png"
 import HifiMobile from "../../assets/maquettes/mockup-mobile.jpg"
 import HifiWeb from "../../assets/maquettes/mockup-web.jpg"
-import ProjectCard from '../Reusable/ProjectCard/ProjectCard';
-import projects from '../../projects';
 import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
 import ProjectHero from './ProjectHero/ProjectHero';
 
@@ -188,9 +186,9 @@ function Weegift(props) {
         <section className='container'>
           <h1>Définition</h1>
           <h2>Diagramme de tâches</h2>
-          <iframe className='w-full h-[500px] mb-16' src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Mod%C3%A8le%20de%20t%C3%A2ches#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1aOrbM2T4I3u2THVEA4rpGqEDW0SSSb9U%26export%3Ddownload"></iframe>
+          <iframe className='w-full h-[500px] mb-16' title="Diagramme de tâches" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Mod%C3%A8le%20de%20t%C3%A2ches#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1aOrbM2T4I3u2THVEA4rpGqEDW0SSSb9U%26export%3Ddownload"></iframe>
           <h2>Diagramme de navigation</h2>
-          <iframe className='w-full h-[500px]' src="https://viewer.diagrams.net/?highlight=0000ff&nav=1&title=Mod%C3%A8le%20de%20navigation#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1i77GJBaaTAH7N1m986no1q0XhjrARlbo%26export%3Ddownload"></iframe>
+          <iframe className='w-full h-[500px]' title="Diagramme de navigation" src="https://viewer.diagrams.net/?highlight=0000ff&nav=1&title=Mod%C3%A8le%20de%20navigation#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1i77GJBaaTAH7N1m986no1q0XhjrARlbo%26export%3Ddownload"></iframe>
         </section>
       </div>
 
