@@ -5,27 +5,9 @@ import projects from '../../projects'
 import "./Home.css"
 import HomeHeader from "../HomeHeader/HomeHeader"
 import PDF from "../../assets/Erin_Bernardoni_CV.pdf";
+import ContactForm from '../ContactForm/ContactForm'
 
 function Home() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add logic to handle form submission (e.g., send data to server)
-    console.log('Form submitted:', formData);
-  };
-
   return (
     <div>
       {/* HEADER */}
@@ -105,26 +87,7 @@ function Home() {
       <section id='contact_me'>
         <div className="container">
           <h1>Me contacter</h1>
-          <form onSubmit={handleSubmit} id="contact-form">
-            <label>
-              Nom:
-              <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            </label>
-            <br />
-            <label>
-              E-mail:
-              <input type="email" name="email" value={formData.email} onChange={handleChange} />
-            </label>
-            <br />
-            <label>
-              Message:
-              <textarea name="message" value={formData.message} onChange={handleChange} />
-            </label>
-            <br />
-            <button className='button button__left__right' type='submit'>
-              Envoyer
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </div>
