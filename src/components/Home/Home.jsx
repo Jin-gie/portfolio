@@ -6,8 +6,56 @@ import "./Home.css"
 import HomeHeader from "../HomeHeader/HomeHeader"
 import PDF from "../../assets/Erin_Bernardoni_CV.pdf";
 import ContactForm from '../ContactForm/ContactForm'
+import { IconBulb, IconSearch, IconLayersSubtract, IconCode, IconHierarchy2 } from '@tabler/icons-react'
+import { FaHtml5, FaCss3Alt, FaReact, FaPhp, FaFigma, FaTrello, FaGithub, FaNodeJs } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiTailwindcss } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { BiLogoPostgresql } from "react-icons/bi";
+import SkillIcon from '../SkillIcon/SkillIcon'
 
 function Home() {
+  const timelineSteps = [
+    {
+      icon: <IconSearch size={32} strokeWidth={1.5} />, 
+      title: 'Recherche',
+      description: String.raw`- Étude de l'existant
+      - Segmentation de la population
+      - Analyse des besoins
+      - Personas et scénarii d'utilisation`,
+    },
+    {
+      icon: <IconHierarchy2 size={32} strokeWidth={1.5} />, 
+      title: 'Définition',
+      description: String.raw`- Modèle de tâches
+      - Modèle de navigation`,
+    },
+    {
+      icon: <IconBulb size={32} strokeWidth={1.5} />, 
+      title: 'Idéation',
+      description: String.raw`- Maquette « Low Fidelity »
+      - Tests utilisateurs
+      `,
+    },
+    {
+      icon: <IconLayersSubtract size={32} strokeWidth={1.5} />, 
+      title: 'Prototypage',
+      description: String.raw`- Maquette « High Fidelity »
+      - Tests utilisateurs
+      `,
+    },
+    {
+      icon: <IconCode size={32} strokeWidth={1.5} />,
+      title: 'Réalisation',
+      description: String.raw`- Développement web
+      - Tests utilisateurs
+      `,
+    },
+  ];
+
+  const iconsize = 25;
+
   return (
     <div>
       {/* HEADER */}
@@ -35,34 +83,62 @@ function Home() {
       {/* SKILLS */}
       <section className='' id='skills'>
       <div className='container'>
-        <div >
+        <div>
           <h1>Mes Compétences</h1>
-          <p>Ma formation et mes expériences m'ont permis d'acquérir de nombreuses compétences complémentaires, me permettant d'être autonome et polyvalente.</p>
-          <p>C'est pourquoi aujourd'hui je suis aussi bien capable de concevoir une interface web ou mobile que de développer une interface web responsive.</p>
-          <p className='mb-12'>
-            L'informatique étant un domaine en constante évolution, mes compétences elles aussi évoluent de jour en jour ! 
-          </p>
-
           <div className='two-cols'>
-            {/* UX DESIGN */}
-            <div className='content__square flex-1'>
-              <h2>UX Design</h2>
-              <p>&gt; Analyse de la population et des besoins utilisateurs</p>
-              <p>&gt; Personas, tests utilisateurs</p>
-              <p>&gt; Prototypage {'('}LoFi, HiFi{')'}: <span className='font-bold'>Figma</span></p>
-              <p>&gt; Étude des fonctions cognitives et du comportement humain</p>
-              <p>&gt; Modéliser un domaine de compétences, scénariser une ressource numérique d'apprentissage </p>
+            <div className='flex-1'>
+              <h2>Mon Design Process UX</h2>
+              {timelineSteps.map((step, index) => {
+                return (
+                  <div className="flex mb-8" key={index}>
+                    <div className="text-center mr-4">
+                      <div className="bg-background-black text-white rounded-full p-4">
+                        {step.icon}
+                      </div>
+                    </div>
+                    <div className="w-4/5">
+                      <h3 className="text-xl font-semibold mb-2 text-white">{step.title}</h3>
+                      <p className="text-gray-400" dangerouslySetInnerHTML={{ __html: step.description.replace(/\n/g, '<br>') }} />
+                    </div>
+                  </div>
+                )
+              })}
             </div>
-
-            {/* Dev Fullstack */}
-            <div className='content__square flex-1'>
-              <h2>Développement FullStack</h2>
-              <p>&gt; Frontend : <span className='font-bold'>HTML, CSS, JS, React</span></p>
-              <p>&gt; Backend : <span className='font-bold'>PHP, MySQL, MariaDB, Firebase, GraphQL</span></p>
-              <p>&gt; Analyse de données et IA : <span className='font-bold'>Python</span> (pandas, numpy, scikit-learn, tensorflow, matplotlib)</p>
-              <p>&gt; Versioning de code : <span className='font-bold'>Git</span> (Github, Gitlab)</p>
+            <div className='flex-1'>
+              <h2>Techs & Outils</h2>
+              <div className=''>
+                <div className='mb-12'>
+                  <h3 className="">Frontend</h3>
+                  <div className='flex gap-8 flex-wrap'>
+                    <SkillIcon icon={<FaHtml5 size={iconsize}/>} name="HTML" />
+                    <SkillIcon icon={<FaCss3Alt size={iconsize} />} name="CSS" />
+                    <SkillIcon icon={<IoLogoJavascript size={iconsize} />} name="JavaScript" />
+                    <SkillIcon icon={<FaReact size={iconsize} />} name="React.js" />
+                    <SkillIcon icon={<TbBrandNextjs size={iconsize} />} name="Next.js" />
+                    <SkillIcon icon={<SiTailwindcss size={iconsize} />} name="Tailwind CSS" />
+                  </div>
+                </div>
+                <div className='mb-12'>
+                  <h3 className="">Backend</h3>
+                  <div className='flex gap-8 flex-wrap'>
+                    <SkillIcon icon={<FaNodeJs size={iconsize} />} name="Node.js" />
+                    <SkillIcon icon={<FaPhp size={iconsize} />} name="PHP" />
+                    <SkillIcon icon={<GrMysql size={iconsize} />} name="MySQL" />
+                    <SkillIcon icon={<BiLogoPostgresql size={iconsize} />} name="PostgreSQL" />
+                  </div>
+                </div>
+                <div className='mb-12'>
+                  <h3 className="">Outils</h3>
+                  <div className='flex gap-8 flex-wrap'>
+                    <SkillIcon icon={<FaFigma size={iconsize} />} name="Figma" />
+                    <SkillIcon icon={<FaGithub size={iconsize} />} name="Github" />
+                    <SkillIcon icon={<FaTrello size={iconsize} />} name="Trello" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          
         </div>
       </div>
       </section>
