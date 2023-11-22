@@ -235,6 +235,15 @@ section {
   width: 50%;
 }
 
+.carousel-other-projects {
+  width: 100%;
+  padding: 20px;
+}
+
+.carousel-other-projects-item {
+  margin-right: 2.5rem;
+}
+
 /*============== BUTTONS ==============*/
 
 
@@ -261,6 +270,10 @@ section {
 
   .carousel-container-persona {
     width: 100%;
+  }
+
+  .carousel-other-projects-item {
+    margin-right: 0;
   }
 }
 
