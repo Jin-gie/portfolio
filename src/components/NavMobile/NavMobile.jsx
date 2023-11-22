@@ -25,7 +25,7 @@ function NavMobile(props) {
                       to={section.ref}
                       key={index}
                       id={`nav-${index}`}
-                      className='nav_item hover:cursor-pointer hover:font-bold'
+                      className='nav_item'
                       smooth={true}
                       duration={500}
                       spy={true}

@@ -13,7 +13,7 @@ function NavDesktop(props) {
                 key={index}
                 id={`nav-${index}`}
                 // className={selected === index ? "nav_selected nav_item hover:cursor-pointer" : "nav_unselected nav_item hover:cursor-pointer"}
-                className='nav_item hover:cursor-pointer hover:font-bold'
+                className='nav_item'
                 smooth={true}
                 duration={500}
                 spy={true}
