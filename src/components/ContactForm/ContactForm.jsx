@@ -4,7 +4,10 @@ import emailjs from "@emailjs/browser"
 function ContactForm() {
   const form = useRef();
 
-  const [formStatus, setFormStatus] = useState('');
+  const [formStatus, setFormStatus] = useState({
+    color : '',
+    message : ''
+  });
   const [emailMsg, setEmailMsg] = useState('');
 
   const [formSent, setFormSent] = useState(false);
@@ -44,9 +47,20 @@ function ContactForm() {
 
     if (!formData.user_name || !formData.user_email || !formData.object || !formData.message || emailMsg) {
       setFormSent(false);
-      setFormStatus('Remplissez tous les champs')
+      setFormStatus({
+        color : 'text-red-400',
+        message: 'Remplissez tous les champs'
+      })
       return;
-    } else {
+    }
+    else if (formSent) {
+      setFormStatus({
+        color: 'text-orange-400',
+        message: 'Vous avez déjà envoyé un mail !'
+      })
+      return;
+    }
+    else {
       
       emailjs.sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID, 
@@ -56,7 +70,10 @@ function ContactForm() {
         )
         .then((result) => {
         setFormSent(true);
-        setFormStatus('Email envoyé !')
+        setFormStatus({
+          color: 'text-green-400',
+          message : 'Email envoyé !'
+        })
         console.log(result.text);
         console.log("message sent")
       }, (error) => {
@@ -92,7 +109,7 @@ function ContactForm() {
       <button className='button button__left__right' type='submit'>
         Envoyer
       </button>
-      {formStatus && <p className={formSent? "text-green-400" : "text-red-400"}>{formStatus}</p>}
+      {formStatus.message && <p className={formStatus.color}>{formStatus.message}</p>}
       
     </form>
   )
