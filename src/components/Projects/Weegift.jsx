@@ -85,7 +85,7 @@ function Weegift(props) {
         desc="Conception et Développement d'une application web de gestion de cagnottes avec ou sans cadeaux"
         cadre="Projet universitaire de fin d'études"
         temps="7 mois (septembre 2022 à mars 2023)"
-        outils="Figma, Draw.io, ReactJS, Firebase"
+        outils="Figma, Draw.io, React.js, Firebase"
       />
 
       {/* PRESENTATION */}
@@ -99,7 +99,7 @@ function Weegift(props) {
         <div className='flex flex-col items-center flex-1'>
           <IconBulb size={50}/>
           <h2>Solution</h2>
-          <p>Nous avons désigné WeeGift, une application web qui permet de regrouper tous les outils nécessaire à l'organisation d'une cagnotte, avec ou sans cadeaux. Du choix des cadeaux, jusqu'au remboursement de tout le monde en passant par la répartition des dépenses, WeeGift permet de simplifier l'organisation de cagnottes.</p>
+          <p>Nous avons designé WeeGift, une application web qui permet de regrouper tous les outils nécessaire à l'organisation d'une cagnotte, avec ou sans cadeaux. Du choix des cadeaux, jusqu'au remboursement de tout le monde en passant par la répartition des dépenses, WeeGift permet de simplifier l'organisation de cagnottes.</p>
         </div>
       </section>
 

@@ -2,15 +2,17 @@ import WeegiftImg from "./assets/project_weegift.jpg"
 import RespirationImg from "./assets/project_respiration.jpg"
 import NeurocosmosImg from "./assets/project_neurocosmo.jpg"
 import ShinobiImg from "./assets/project_shinobi.jpg"
+import FreyjaImg from "./assets/project_freyja.jpg"
 import Weegift from "./components/Projects/Weegift"
 import Neurocosmos from "./components/Projects/Neurocosmos"
 import Respiration from "./components/Projects/Respiration"
 import Shinobi from "./components/Projects/Shinobi"
+import Freyja from "./components/Projects/Freyja"
 
 const projects = {
   "weegift" : {
     title: "WeeGift",
-    subtitle : "UX Design - ReactJS",
+    subtitle : "UX Design - React.js",
     description : "Projet universitaire visant à simplifier l'organisation de cagnottes.",
     picture: WeegiftImg,
     element: <Weegift />,
@@ -21,6 +23,17 @@ const projects = {
       // { to_display: "{définition}", ref: "#definition" },
       // { to_display: "{idéation}", ref: "#ideation" },
       // { to_display: "{prototypage}", ref: "#prototype" },
+    ]
+  },
+  "freyja" : {
+    title: "Freyja",
+    subtitle : "UX Design - React.js",
+    description : "Projet universitaire innovant de suivi quotidien de la consommation d'eau personnelle.",
+    picture: FreyjaImg,
+    element: <Freyja />,
+    tags: ["ux", "react"],
+    sections: [
+      // { to_display: "{à_propos}", ref: "#about" },
     ]
   },
   "neurocosmos" : {
