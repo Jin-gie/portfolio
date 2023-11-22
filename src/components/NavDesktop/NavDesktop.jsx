@@ -20,7 +20,7 @@ function NavDesktop(props) {
                 activeClass={"nav_selected"}
                 spyThrottle={100}
                 hashSpy={true}
-                offset={-75}
+                offset={0}
               >
                 {section.to_display}
               </LinkScroll>

@@ -69,8 +69,8 @@ function Home() {
         <div className='container flex justify-between items-center'>
           <div className='max-w-[66%]'>
             <h1>À propos de moi</h1>
-            <p>Bonjour ! Passionnée depuis de nombreuses années par le numérique, j'ai suivi une formation en informatique et je suis diplômée depuis peu d'un Master en Sciences Cognitives.</p>
-            <p className='mb-12'>J'ai conscience de l'importance de prendre en compte le besoin utilisateur lors de la conception de solutions, pour avoir des produits utiles, utilisables et utilisés ! C'est pourquoi je m'assure de créer des interfaces utilisateurs aussi élégantes et intuitives, qu'accessibles pour assurer une expérience utilisateur optimale.</p>
+            <p>Bonjour ! Passionnée depuis de nombreuses années par le numérique, j'ai suivi une formation en informatique et je suis diplômée depuis peu d'un Master en <span className='font-bold'>Sciences Cognitives.</span></p>
+            <p className='mb-12'>J'ai conscience de l'importance de prendre en compte le <span className='font-bold'>besoin utilisateur</span> lors de la conception de solutions, pour avoir des produits utiles, utilisables et utilisés ! C'est pourquoi je m'assure de créer des interfaces utilisateurs aussi élégantes et intuitives, qu'accessibles pour assurer une expérience utilisateur optimale.</p>
             <a href={PDF} rel='noopener noreferrer' target='_blank' type='button' className='button button__left__right'>
               Mon CV
             </a>
