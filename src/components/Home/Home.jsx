@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Photo from '../../assets/photo_forme.png'
 import ProjectCard from '../Reusable/ProjectCard/ProjectCard'
 import projects from '../../projects'
@@ -7,12 +7,13 @@ import HomeHeader from "../HomeHeader/HomeHeader"
 import PDF from "../../assets/Erin_Bernardoni_CV.pdf";
 import ContactForm from '../ContactForm/ContactForm'
 import { IconBulb, IconSearch, IconLayersSubtract, IconCode, IconHierarchy2 } from '@tabler/icons-react'
-import { FaHtml5, FaCss3Alt, FaReact, FaPhp, FaFigma, FaTrello, FaGithub, FaNodeJs } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaPhp, FaFigma, FaTrello, FaGithub, FaNodeJs, FaLinkedinIn } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { MdAlternateEmail } from "react-icons/md";
 import SkillIcon from '../SkillIcon/SkillIcon'
 
 function Home() {
@@ -163,7 +164,25 @@ function Home() {
       <section id='contact_me'>
         <div className="container">
           <h1>Me contacter</h1>
-          <ContactForm />
+          <div className='two-cols mt-8'>
+            <div className='flex-1'>
+              Mon profil vous plaît ? N'hésitez pas à me contacter via mes différents réseaux !
+              <div className='flex gap-8 mt-8'>
+                <a href='https://linkedin.com/in/erin-bernardoni'>
+                  <FaLinkedinIn size={30} />
+                </a>
+                <a href='https://github.com/Jin-gie'>
+                  <FaGithub size={30}/>
+                </a>
+                <a href='mailto:erin.bernardoni@outlook.fr'>
+                  <MdAlternateEmail size={30} />
+                </a>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <ContactForm />
+            </div>
+          </div>
         </div>
       </section>
     </div>

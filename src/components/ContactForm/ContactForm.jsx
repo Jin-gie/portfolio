@@ -87,7 +87,7 @@ function ContactForm() {
   return (
     <form ref={form} onSubmit={handleSubmit} id="contact-form">
       <label>
-        Nom :
+        Nom complet :
         <input type="text" name="user_name" value={formData.user_name} onChange={handleChange} />
       </label>
       <br />
