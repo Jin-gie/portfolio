@@ -138,13 +138,13 @@ function Weegift(props) {
       {/* RECHERCHE */}
       <section className='container' id="research">
         <h1>Recherche</h1>
-        <div className='two-cols'>
-          <div className='mb-8'>
+        <div className='two-cols mb-16'>
+          <div className='flex-1'>
             <h2>Étude de l'existant</h2>
             <p>Dans la phase de recherche nous avons dans un premier temps réalisé une étude comparative, nous permettant de mieux cerner l'existant sur le marché, leurs points forts et points faibles. Pour chaque solution, nous avons évalué les fonctionnalités, la navigation et l'interface et design. Les solutions ainsi comparées sont Paypal, Mon Pot Commun, Gift Family et Gift Picker.</p>
           </div>
 
-          <div>
+          <div className='flex-1'>
             <h2>Segmentation</h2>
             <p>Bien connaître la population qui pourrait être susceptible d'utiliser une solution telle que WeeGift est essentiel afin de mieux cibler les personnes interrogées pour ensuite réaliser les personas. Nous avons donc réalisé une segmentation de la population à partir des chiffres disponibles sur le web. 3 critères principaux en ressortent : le sexe, l'âge et la catégorie socio-professionnelle </p>
           </div>
@@ -154,7 +154,28 @@ function Weegift(props) {
         <p>pour mieux comprendre les besoins et nous permettre par la suite de réfléchir aux fonctionnalités indispensables de notre application, nous avons réalisé un questionnaire d'analyse des besoins (NAQ).</p>
 
         <div className='flex justify-center'>
-          <Carousel 
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            ssr={true}
+            infinite={true}
+            autoPlay={false}
+            containerClass='carousel-container-persona'
+            deviceType={props.deviceType}
+          >
+            <div className='w-full'>
+              <img loading='lazy' src={Iva} alt="Fiche Persona d'Iva"/>
+            </div>
+            <div className='w-full'>
+              <img loading='lazy' src={Celine} alt="Fiche Persona de Céline"/>
+            </div>
+            <div className='w-full'>
+              <img loading='lazy' src={Guillaume} alt="Fiche Persona de Guillaume"/>
+            </div>
+          </Carousel>
+          {/* <Carousel 
             swipeable={true}
             draggable={true}
             showDots={false}
@@ -177,7 +198,7 @@ function Weegift(props) {
             <div className='w-full'>
               <img loading='lazy' src={Guillaume} alt="Fiche Persona de Guillaume"/>
             </div>
-          </Carousel>
+          </Carousel> */}
         </div>
       </section>
 

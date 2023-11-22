@@ -258,6 +258,10 @@ section {
   section {
     padding: 7rem 0.75rem;
   }
+
+  .carousel-container-persona {
+    width: 100%;
+  }
 }
 
 /*============== SCROLLBAR ==============*/
