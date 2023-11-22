@@ -9,7 +9,7 @@ function ProjectCard(props) {
   return (
     <div className='w-72 min-h-[340px] border border-solid border-white project-container' onClick={() => {navigate("/" + props.path)}}>
       <img loading='lazy' src={project.picture} alt="Mockup of Weegift" />
-      <div className='flex flex-col items-center text-center'>
+      <div className='flex flex-col items-center text-center px-4'>
         <h3 className='text-white'>{project.title}</h3>
         <p className='subtitle'>{project.subtitle}</p>
         <p>{project.description}</p>
