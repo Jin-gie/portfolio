@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       colors: {
         'background-black' : '#131313',
+        'text-color' : '#c6bfc2',
+        'title-color' : '#fff'
+
       }
     },
   },

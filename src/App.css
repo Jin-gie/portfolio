@@ -1,10 +1,15 @@
 /*============== VARIABLES CSS ==============*/
 :root {
   /* COLORS */
-  --body-color: #131313;
-  --light-background: #282828;
+  /* --body-color: #131313; */
+  /* --light-background: #282828;
   --text-color: white;
-  --title-color: #969696;
+  --title-color: #969696; */
+
+  --body-color: #1a1a1a;
+  --light-background: #24282f;
+  --text-color: #c6bfc2;
+  --title-color: #fff;
 
   /* FONT SIZES */
   --h1-font-size: 2.25rem;
@@ -56,6 +61,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 html {
@@ -204,7 +218,16 @@ section {
   flex-wrap: wrap;
 }
 
+.text-emphaze {
+  font-weight: bold;
+  color: white;
+}
+
 /*============== LAYOUT ==============*/
+.footer {
+  margin-top: auto;
+}
+
 .container {
   max-width: 1024px;
   margin-left: auto;

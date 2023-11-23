@@ -15,6 +15,7 @@ import HifiMobile from "../../assets/maquettes/mockup-mobile.jpg"
 import HifiWeb from "../../assets/maquettes/mockup-web.jpg"
 import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
 import ProjectHero from './ProjectHero/ProjectHero';
+import ProjectTimeline from '../ProjectTimeline/ProjectTimeline';
 
 function Weegift(props) {
   const timelineSteps = [
@@ -82,8 +83,8 @@ function Weegift(props) {
       <ProjectHero 
         img={WeegiftImg}
         project="WeeGift"
-        desc="Conception et Développement d'une application web de gestion de cagnottes avec ou sans cadeaux"
-        cadre="Projet universitaire de fin d'études"
+        desc="Conception et développement d'une application web de gestion de cagnottes avec ou sans cadeaux"
+        cadre="Projet universitaire de fin d'études, réalisé en groupe"
         temps="7 mois (septembre 2022 à mars 2023)"
         outils="Figma, Draw.io, React.js, Firebase"
       />
@@ -93,7 +94,7 @@ function Weegift(props) {
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>
-          <p>Trouver les bons cadeaux, répartir les dépenses, se rembourser. L'organisation d'une cagnotte pour un anniversaire ou un pot de départ par exemple peut se révéler compliquée et de nombreux outils sont nécessaire pour réaliser ces différentes actions.</p>
+          <p>Trouver les bons cadeaux, répartir les dépenses, se rembourser. L'organisation d'une cagnotte pour un anniversaire ou un pot de départ par exemple peut se révéler compliquée et de nombreux outils sont nécessaires pour réaliser ces différentes actions.</p>
         </div>
 
         <div className='flex flex-col items-center flex-1'>
@@ -109,27 +110,13 @@ function Weegift(props) {
           <div className='two-cols'>
             <div className='flex-1'>
               <h1>Design Process</h1>
-              {timelineSteps.map((step, index) => {
-                return (
-                  <div className="flex mb-8" key={index}>
-                    <div className="text-center mr-4">
-                      <div className="bg-background-black text-white rounded-full p-4">
-                        {step.icon}
-                      </div>
-                    </div>
-                    <div className="w-4/5">
-                      <h3 className="text-xl font-semibold mb-2 text-white">{step.title}</h3>
-                      <p className="text-gray-400" dangerouslySetInnerHTML={{ __html: step.description.replace(/\n/g, '<br>') }} />
-                    </div>
-                  </div>
-                )
-              })}
+              <ProjectTimeline timelineSteps={timelineSteps} />
             </div>
             <div className='flex-1'>
               <h1>Ma Contribution</h1>
-              <p>Au sein de ce projet j'ai eu une double casquette d'UX designer et de développeur.</p>
+              <p>Au sein de ce projet j'ai eu une double casquette d'UX designer et de développeuse.</p>
 
-              <p>J'ai ainsi participé à la recherche UX pour définir la population cible de notre application et ses besoins. Puis, lors du design de WeeGift j'ai réalisé les différents modèles (tâche et navigation) ainsi que les protocoles de test pour les retours utilisateur. Enfin, lors de la phase de réalisation, j'ai participé au développement de l'application.</p>
+              <p>J'ai ainsi participé à la recherche UX pour définir la population cible de notre application et ses besoins. Puis, lors du design de WeeGift j'ai réalisé les différents modèles (tâche et navigation) ainsi que les protocoles de test pour les retours utilisateur. Enfin, lors de la phase de réalisation, j'ai participé au développement de l'application web.</p>
             </div>
           </div>
         </section>
@@ -146,12 +133,12 @@ function Weegift(props) {
 
           <div className='flex-1'>
             <h2>Segmentation</h2>
-            <p>Bien connaître la population qui pourrait être susceptible d'utiliser une solution telle que WeeGift est essentiel afin de mieux cibler les personnes interrogées pour ensuite réaliser les personas. Nous avons donc réalisé une segmentation de la population à partir des chiffres disponibles sur le web. 3 critères principaux en ressortent : le sexe, l'âge et la catégorie socio-professionnelle </p>
+            <p> Il a été nécessaire de bien connaître la population qui pourrait être susceptible d'utiliser une solution telle que Weegift. Cela a permis de mieux cibler les personnes interrogées pour ensuite concevoir les personas. Nous avons donc réalisé une segmentation de la population à partir des chiffres disponibles sur le web. 3 critères principaux en ressortent : le sexe, l'âge et la catégorie socio-professionnelle </p>
           </div>
         </div>
 
         <h2>Analyse des besoins</h2>
-        <p>pour mieux comprendre les besoins et nous permettre par la suite de réfléchir aux fonctionnalités indispensables de notre application, nous avons réalisé un questionnaire d'analyse des besoins (NAQ).</p>
+        <p>Pour mieux comprendre les besoins et nous permettre par la suite de réfléchir aux fonctionnalités indispensables de notre application, nous avons réalisé un questionnaire d'analyse des besoins (NAQ).</p>
 
         <div className='flex justify-center'>
           <Carousel
@@ -220,7 +207,7 @@ function Weegift(props) {
         <div className='two-cols'>
           <div className='flex-1'>
               <p>
-                La première maquette qui a été réalisée pour ce projet est une maquette LoFi, qui a connu plusieurs évolutions. Nous nous sommes dans un premier temps réunies autour d'un atelier de co-conception, en utilisant la méthode “six-to-one” afin de s'accorder sur les différentes vues que nous voulions proposer pour la conception de notre interface, et sur la manière d'organiser les différentes interactions entre les pages.
+                La première maquette qui a été réalisée pour ce projet est une maquette LoFi, qui a connu plusieurs évolutions. Nous nous sommes dans un premier temps réunies autour d'un atelier de co-conception, en utilisant la méthode “six-to-one”. Cet atelier nous a permis de s'accorder sur les différentes vues que nous voulions proposer pour la conception de notre interface et sur la manière d'organiser les différentes interactions entre les pages.
               </p>
           </div>
           <div className='flex-1'>
@@ -244,7 +231,7 @@ function Weegift(props) {
 
         <h2 className='mt-16'>Tests utilisateurs</h2>
         <p>
-          Les utilisateurs ont trouvé la navigation et la présentation des éléments explicites et faciles d'utilisation. Le score moyen obtenu lors du post-questionnaire est supérieur au jalon de 85,5. Les tâches ont été réalisées dans un temps respectable (moins de 5 minutes au total) et avec une moyenne de 2 erreurs. Ces erreurs ont cependant été réalisées et identifiées comme une mauvaise compréhension de certains éléments des pages. En effet, réaliser ces tests utilisateurs nous a permis d'avoir un retour sur certains termes qui étaient clairs pour nous, mais qui, pour un extérieur, présentent une certaine confusion.
+          Les utilisateurs ont trouvé la navigation et la présentation des éléments explicites et faciles d'utilisation. Différentes métriques ont été utilisées (temps de parcours, nombre d'erreurs, etc.). Réaliser ces tests utilisateurs nous a permis d'avoir un retour sur certains termes qui étaient clairs pour nous, mais qui, pour un extérieur, présentent une certaine confusion.
         </p>
       </section>
 
@@ -290,8 +277,8 @@ function Weegift(props) {
 
           <h2 className='mt-16'>Tests utilisateurs</h2>
             <p>Le déroulé des tests utilisateurs était le même que pour la maquette LoFi, avec des participants différents afin d'éviter un biais d'apprentissage.</p>
-            <p>Une première analyse s'est faite sur les métriques du temps de réalisation, nombre de clics, nombre d'erreurs. Les utilisateurs tests ont réalisé des temps inférieurs aux temps maximaux définis dans les métriques ainsi qu'un nombre de clic correspondant à ce qui était imaginé. Un score au questionnaire SUS de 82,52 a été obtenu, traduisant des incohérences relevées sur les pages de recommandations de cadeaux.</p>
-            <p>Des erreurs ont cependant été observées, nous permettant de mieux comprendre le cheminement de pensée d'utilisateurs qui découvrent notre solution et ainsi de rectifier le tir.</p>
+            <p>Une première analyse s'est faite sur les métriques du temps de réalisation, nombre de clics, nombre d'erreurs. Puis, nous avons utilisé un questionnaire permettant d'obtenir un score. </p>
+            <p>Des erreurs ont été observées, nous permettant de mieux comprendre le cheminement de pensée d'utilisateurs qui découvrent notre solution et ainsi de rectifier le tir.</p>
 
         </section>
       </div>

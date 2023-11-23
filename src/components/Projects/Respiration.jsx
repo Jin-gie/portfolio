@@ -15,8 +15,8 @@ function Respiration() {
       <ProjectHero 
         img={RespirationImg}
         project="La Respiration"
-        desc="Conception et Développement d'un environnement virtuel permettant à des élèves de 5e de mieux comprendre la respiration."
-        cadre="Projet universitaire en groupe de VR"
+        desc="Conception et développement d'un environnement virtuel permettant à des élèves de 5e de mieux comprendre la respiration."
+        cadre="Projet universitaire en groupe"
         temps="2 mois"
         outils="Figma, Blender, Unity 3D"
       />
@@ -26,13 +26,13 @@ function Respiration() {
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>
-          <p>Des outils immersifs peuvent permettre de mieux percevoir le fonctionnement de nombreuses choses, notamment du vivant. C'est pourquoi un collège à proximité de Nancy a fait appel à l'Université de Lorraine pour réaliser des applications en réalité virtuelle ou augmentée reprenant des concepts de cours.</p>
+          <p>Des outils immersifs peuvent permettre de mieux percevoir le fonctionnement de nombreux phénomènes, notamment du vivant. C'est pourquoi un collège à proximité de Nancy a fait appel à l'Université de Lorraine pour réaliser des applications en réalité virtuelle ou augmentée reprenant des concepts de cours.</p>
         </div>
 
         <div className='flex flex-col items-center flex-1'>
           <IconBulb size={50}/>
           <h2>Solution</h2>
-          <p>Le groupe dans lequel j'étais a réalisé une application de réalité virtuelle, permettant de répondre à la problématique de la connaissance du fonctionnement des muscles du diaphragme, des côtes et du gonflement des poumons. Designée pour un public de 5e au collège, cette application immersive permet de voir les mouvements respiratoires et d'en apprendre plus sur les différents organes.</p>
+          <p>Le groupe dans lequel j'étais a réalisé une application Android de réalité virtuelle, permettant de répondre à la problématique de la connaissance du fonctionnement des muscles du diaphragme, des côtes et du gonflement des poumons. Designée pour un public de 5e au collège, cette application immersive permet de voir les mouvements respiratoires et d'en apprendre plus sur les différents organes.</p>
         </div>
       </section>
 
@@ -66,7 +66,7 @@ function Respiration() {
             </div>
             <div className='flex-1'>
               <h3>Technologies utilisées</h3>
-              <p>Pour réaliser ce projet nous avons utilisé Blender pour adapter le modèle 3D à partir de modèles trouvés dans des librairie. Il était par exemple nécessaire de découper les côtes pour leur mouvement.</p>
+              <p>Pour réaliser ce projet nous avons utilisé Blender pour créer et adapter un modèle 3D à partir de plusieurs autres modèles trouvés dans des librairie. Il était par exemple nécessaire de découper les côtes pour leur mouvement.</p>
               <p>L'environnement virtuel a été réalisé sur Unity 3D.</p>
             </div>
           </div>

@@ -6,7 +6,7 @@ function ProjectHero({img, project, desc, cadre, temps, outils}) {
 
   return (
     <div className='container lg:mt-40 mt-16'>
-      <Link to={"/#projects"}>&lt; <span className='underline underline-offset-2'>Retours aux projets</span></Link>
+      <Link to={"/#projects"} className='hover:text-white hover:underline hover:underline-offset-2'>&lt; <span className=''>Retours aux projets</span></Link>
       <div className='lg:relative mt-4'>
         <img loading='lazy' src={img} alt='Mockup of the project Weegift' />
         <div className='lg:absolute lg:top-0 lg:right-0 lg:bg-background-black/[.88] lg:w-1/2 h-full flex flex-col justify-center lg:px-10 px-3'>

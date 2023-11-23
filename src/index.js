@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
   <Router basename={process.env.PUBLIC_URL}>
     <ScrollToTop />
     <App />
+    <Footer />
   </Router>
 );
 

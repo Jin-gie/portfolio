@@ -3,6 +3,7 @@ import { IconQuestionMark, IconBulb, IconSearch, IconLayersSubtract, IconCode, I
 import ProjectHero from './ProjectHero/ProjectHero';
 import FreyjaImg from "../../assets/project_freyja.jpg";
 import OtherProjects from '../Reusable/OtherProjects/OtherProjects';
+import ProjectTimeline from '../ProjectTimeline/ProjectTimeline';
 
 function Freyja(props) {
   const timelineSteps = [
@@ -46,8 +47,8 @@ function Freyja(props) {
       <ProjectHero 
         img={FreyjaImg}
         project="Freyja"
-        desc="Conception et Développement d'une application web mobile-only de suivi quotidien de la consommation personnelle d'eau"
-        cadre="Projet universitaire"
+        desc="Conception et développement d'une application web mobile-only de suivi quotidien de la consommation personnelle d'eau"
+        cadre="Projet universitaire, réalisé en groupe"
         temps="2 mois"
         outils="Figma, Draw.io, React.js, Directus"
       />
@@ -57,13 +58,13 @@ function Freyja(props) {
         <div className='flex flex-col items-center flex-1'>
           <IconQuestionMark size={50}/>
           <h2>Problème</h2>
-          <p>La problématique principale de ce projet était de réfléchir et développer une application web innovante autour de la santé, en utilisant React.js.</p>
+          <p>La problématique principale de ce projet était de réfléchir et développer une application web innovante autour de la santé. Nous avions pour se projet une contrainte de technologies, à savoir utiliser React.js et Directus.</p>
         </div>
 
         <div className='flex flex-col items-center flex-1'>
           <IconBulb size={50}/>
           <h2>Solution</h2>
-          <p>Boire de l'eau en bonne quantité tous les jours est important, c'est pourquoi nous avons réfléchi et conçu une application web permettant de suivre la consommation quotidienne d'eau. L'application Freyja permet aussi de prendre des mesures physiologiques, à l'aide notamment d'une montre connectée, pour adapter les besoins en eau selon les personnes.</p>
+          <p>Boire de l'eau en bonne quantité tous les jours est important, c'est pourquoi nous avons réfléchi et conçu une application web permettant de suivre la consommation quotidienne d'eau. L'application Freyja permet aussi de prendre des mesures physiologiques, à l'aide notamment d'une montre connectée, pour adapter les besoins en eau selon un utilisateur donné.</p>
         </div>
       </section>
 
@@ -73,27 +74,13 @@ function Freyja(props) {
           <div className='two-cols'>
             <div className='flex-1'>
               <h1>Design Process</h1>
-              {timelineSteps.map((step, index) => {
-                return (
-                  <div className="flex mb-8" key={index}>
-                    <div className="text-center mr-4">
-                      <div className="bg-background-black text-white rounded-full p-4">
-                        {step.icon}
-                      </div>
-                    </div>
-                    <div className="w-4/5">
-                      <h3 className="text-xl font-semibold mb-2 text-white">{step.title}</h3>
-                      <p className="text-gray-400" dangerouslySetInnerHTML={{ __html: step.description.replace(/\n/g, '<br>') }} />
-                    </div>
-                  </div>
-                )
-              })}
+              <ProjectTimeline timelineSteps={timelineSteps} />
             </div>
             <div className='flex-1'>
               <h1>Ma Contribution</h1>
-              <p>Au sein de ce projet j'ai surtout participé lors de la phase de recherche et de développement.</p>
+              <p>Au sein de ce projet j'ai majoritairement contribué à la phase de recherche et de développement.</p>
 
-              <p>J'ai ainsi participé à la recherche UX en réalisant une étude de l'existant, puis la définition des besoins utilisateurs. Puis, lors de la phase de définition, j'ai aidé à la réalisation des modèles de l'application. Enfin, lors de la phase de réalisation, j'ai participé au développement de l'application.</p>
+              <p>J'ai ainsi participé à la recherche UX en réalisant une étude de l'existant, puis la définition des besoins utilisateurs. Lors de la phase de définition, j'ai aidé à la réalisation des modèles de l'application. Enfin, lors de la phase de réalisation, j'ai participé au développement de l'application.</p>
             </div>
           </div>
         </section>

@@ -21,7 +21,7 @@ function Page(props) {
         <IconChevronsUp size={30}/>
       </button>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
