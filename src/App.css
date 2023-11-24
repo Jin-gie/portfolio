@@ -157,7 +157,7 @@ section {
 }
 
 .nav_selected {
-  color: var(--text-color);
+  color: #fff;
   font-weight: bold;
 }
 
