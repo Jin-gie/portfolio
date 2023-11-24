@@ -278,17 +278,16 @@ section {
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  
-}
-
-/* For small devices */
-@media screen and (max-width: 576px) {
   .two-cols {
     flex-direction: column;
   }
 
   section {
     padding: 7rem 0.75rem;
+  }
+
+  footer {
+    padding: 0 0.75rem;
   }
 
   .carousel-container-persona {
@@ -298,6 +297,12 @@ section {
   .carousel-other-projects-item {
     margin-right: 0;
   }
+  
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+  
 }
 
 /*============== SCROLLBAR ==============*/
