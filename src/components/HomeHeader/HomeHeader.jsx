@@ -3,7 +3,7 @@ import './HomeHeader.css';
 import Photo from "../../assets/photo_circle.png";
 import { IconChevronCompactDown } from '@tabler/icons-react';
 import { Link } from 'react-scroll';
-import PDF from "../../assets/Erin_Bernardoni_CV.pdf";
+import PDF from "../../assets/CV_Erin_Bernardoni.pdf";
 
 const Header = () => {
 

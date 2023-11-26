@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Link as ScrollLink } from "react-scroll"
 
 function ProjectHero({img, project, desc, cadre, temps, outils}) {
 

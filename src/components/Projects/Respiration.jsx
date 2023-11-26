@@ -78,7 +78,7 @@ function Respiration() {
       </div>
 
 
-      <OtherProjects current_project="respiration" />
+      <OtherProjects project_to_show="neurocosmos" />
     </div>
   )
 }

@@ -1,11 +1,7 @@
 import React from 'react'
 import WeegiftImg from "../../assets/project_weegift.jpg"
 import { IconQuestionMark, IconBulb, IconSearch, IconLayersSubtract, IconCode, IconHierarchy2 } from '@tabler/icons-react'
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css'
-import Celine from '../../assets/personas/Persona_Celine.png'
-import Iva from '../../assets/personas/Persona_Iva.png'
-import Guillaume from '../../assets/personas/Persona_Guillaume.png'
 import LofiPaper from '../../assets/maquettes/papier2.png'
 import LofiMobile from "../../assets/maquettes/Lofi_mobile.jpg"
 import LofiDesktop from "../../assets/maquettes/Lofi_desktop.jpg"
@@ -55,27 +51,6 @@ function Weegift(props) {
       `,
     },
   ];
-
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-
 
   return (
     <div className=''>
@@ -139,54 +114,6 @@ function Weegift(props) {
 
         <h2>Analyse des besoins</h2>
         <p>Pour mieux comprendre les besoins et nous permettre par la suite de réfléchir aux fonctionnalités indispensables de notre application, nous avons réalisé un questionnaire d'analyse des besoins (NAQ).</p>
-
-        <div className='flex justify-center'>
-          <Carousel
-            swipeable={true}
-            draggable={true}
-            showDots={true}
-            responsive={responsive}
-            ssr={true}
-            infinite={true}
-            autoPlay={false}
-            containerClass='carousel-container-persona'
-            deviceType={props.deviceType}
-          >
-            <div className='w-full'>
-              <img loading='lazy' src={Iva} alt="Fiche Persona d'Iva"/>
-            </div>
-            <div className='w-full'>
-              <img loading='lazy' src={Celine} alt="Fiche Persona de Céline"/>
-            </div>
-            <div className='w-full'>
-              <img loading='lazy' src={Guillaume} alt="Fiche Persona de Guillaume"/>
-            </div>
-          </Carousel>
-          {/* <Carousel 
-            swipeable={true}
-            draggable={true}
-            showDots={false}
-            responsive={responsive}
-            ssr={true}
-            infinite={true}
-            autoPlay={false}
-            keyBoardControl={true}
-            customTransition='all .5'
-            transitionDuration={500}
-            containerClass='carousel-container-persona'
-            deviceType={props.deviceType}
-          >
-            <div className='w-full'>
-              <img loading='lazy' src={Iva} alt="Fiche Persona d'Iva"/>
-            </div>
-            <div className='w-full'>
-              <img loading='lazy' src={Celine} alt="Fiche Persona de Céline"/>
-            </div>
-            <div className='w-full'>
-              <img loading='lazy' src={Guillaume} alt="Fiche Persona de Guillaume"/>
-            </div>
-          </Carousel> */}
-        </div>
       </section>
 
       {/* DEFINITION */}
@@ -283,7 +210,7 @@ function Weegift(props) {
         </section>
       </div>
 
-      <OtherProjects current_project="weegift" />
+      <OtherProjects project_to_show="freyja" />
     </div>
   )
 }

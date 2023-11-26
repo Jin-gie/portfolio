@@ -183,7 +183,7 @@ function Neurocosmos() {
         </div>
       </section>
 
-      <OtherProjects current_project="neurocosmos" />
+      <OtherProjects project_to_show="respiration" />
     </div>
   )
 }

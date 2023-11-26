@@ -4,7 +4,7 @@ import ProjectCard from '../Reusable/ProjectCard/ProjectCard'
 import projects from '../../projects'
 import "./Home.css"
 import HomeHeader from "../HomeHeader/HomeHeader"
-import PDF from "../../assets/Erin_Bernardoni_CV.pdf";
+import PDF from "../../assets/CV_Erin_Bernardoni.pdf";
 import ContactForm from '../ContactForm/ContactForm'
 import { IconBulb, IconSearch, IconLayersSubtract, IconCode, IconHierarchy2 } from '@tabler/icons-react'
 import { FaHtml5, FaCss3Alt, FaReact, FaPhp, FaFigma, FaTrello, FaGithub, FaNodeJs, FaLinkedinIn } from "react-icons/fa";

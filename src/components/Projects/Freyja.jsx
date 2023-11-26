@@ -86,7 +86,7 @@ function Freyja(props) {
         </section>
       </div>
 
-      <OtherProjects current_project="freyja" />
+      <OtherProjects project_to_show="weegift" />
     </div>
   )
 }

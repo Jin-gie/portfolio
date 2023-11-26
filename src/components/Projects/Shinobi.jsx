@@ -18,7 +18,7 @@ function Shinobi() {
         <h1>Réalisation du projet en cours, description à venir.</h1>
       </section>
 
-      <OtherProjects current_project="neurocosmos" />
+      <OtherProjects project_to_show="weegift" />
     </div>
   )
 }
