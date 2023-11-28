@@ -70,9 +70,13 @@ function Home() {
         <div className='container flex justify-between items-center'>
           <div className='max-w-[66%]'>
             <h1>À propos de moi</h1>
-            <p>Bonjour ! Passionnée depuis de nombreuses années par le numérique, j'ai suivi une formation en informatique et je suis diplômée depuis peu d'un Master en <span className='text-emphaze'>Sciences Cognitives.</span></p>
-            <p className='mb-12'>J'ai conscience de l'importance de prendre en compte les <span className='text-emphaze'>besoins utilisateurs</span> lors de la conception de solutions numériques, pour avoir des produits <span className='text-emphaze'>utiles, utilisables et utilisés</span> ! C'est pourquoi je m'assure de créer des interfaces utilisateurs aussi élégantes et intuitives, qu'accessibles pour assurer une expérience utilisateur optimale.</p>
-            <a href={PDF} rel='noopener noreferrer' target='_blank' type='button' className='button button__left__right'>
+            <p>Bonjour ! Passionnée par le numérique depuis de nombreuses années, j'ai suivi une formation en informatique et récemment obtenu un Master en <span className='text-emphaze'>Sciences Cognitives.</span>.</p>
+
+            <p>Sensibilisée à l'importance de répondre aux <span className='text-emphaze'>besoins utilisateurs</span> dans la conception de solutions numériques, je veille à créer des interfaces élégantes, intuitives et accessibles pour une expérience utilisateur optimale.</p>
+
+            <p className='mb-0'>Consciente de l'impact environnemental du numérique, je m'engage également à intégrer des pratiques d'<span className='text-emphaze'>éco-conception</span> dans mes solutions.</p>
+
+            <a href={PDF} rel='noopener noreferrer' target='_blank' type='button' className='button button__left__right mt-12' >
               Mon CV
             </a>
           </div>
